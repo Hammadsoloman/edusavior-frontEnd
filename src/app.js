@@ -12,34 +12,40 @@ import Classes from './components/classes/classes';
 import Dashboard from './components/dashboard/dashboard'
 import { Redirect } from "react-router-dom";
 const App = (props) => {
-const [loggedIn,user,login,logedout] = useLogin();
-const [signedUp,userSign,signup , logout] = useSignup();
+const [loggedIn,user,login,logedout , tokenSigned] = useLogin();
+const [signedUp,userSign,signup , logout ,token] = useSignup();
 let check = false;
 let log ;
 let userInfo;
+let mytoken;
 if(loggedIn){
     check = loggedIn;
     log = logedout;
     userInfo = user;
+    mytoken = tokenSigned;
 }else if(signedUp){
     check = signedUp;
     log = logout;
     userInfo = userSign;
+    mytoken = token;
 }
         return(
             <>
             <BrowserRouter>
             
             <Show condition={!check }>
-                 {/* <Redirect to="/" />  */}
+                 <Redirect to="/signin" /> 
                 <Login login={login}  ></Login>
                 <Logout signup={signup} />
             </Show>
-            
+            {/* <Show condition={check }>
+                 <Redirect to="/" /> 
+            </Show> */}
             <Show condition={check}>
             <Header user ={userInfo} logout={log} />
+            <Redirect to="/" /> 
             <Route exact path='/'>
-                <Home  user ={userInfo} />
+                <Home token={mytoken}  user ={userInfo} />
             </Route>
             <Route exact path='/classes'>
                 <Classes  user ={userInfo}/>
@@ -47,10 +53,8 @@ if(loggedIn){
             <Route exact path='/dashboard'>
                 <Dashboard  user ={userInfo}/>
             </Route>
-
             <Footer/>
              </Show>
-      
             </BrowserRouter>
              </>
         )
