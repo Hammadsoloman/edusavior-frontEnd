@@ -15,21 +15,6 @@ const Header = (props) => {
       </header>
     );
     };
-    // class Header extends React.Component   {
-    //   constructor(props){
-    //     super(props)
-    //   }
-    //   render(){
-    //     if(!this.props.loggedIn){
-    //      return <Redirect to="/" /> 
-    //     }
-    //     return (
-    //         <header>
-    //         <h1>Header</h1>
-    //         <button onClick={this.props.logout} >logout</button>
-    //       </header>
-    //     );
-    //   }
-    //   };
+   
     
 export default Header;

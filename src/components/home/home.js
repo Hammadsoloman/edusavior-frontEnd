@@ -8,9 +8,13 @@ const Home = (props) => {
   // getCoursses(props.token)
   useEffect(getCoursses, []);
 console.log('allcourses',allcourses);
+const handleSubmit = (e) =>{}
     return (
         <>
             <h1>home</h1>
+            <form onSubmit={()=>handleSubmit()}>
+              <button>see some courses</button>
+            </form>
     <ul>
       
       {allcourses.map(item=>{
@@ -27,7 +31,7 @@ console.log('allcourses',allcourses);
           <p>{item.description}</p>
           </li>
         )
-      })}
+      }).slice(0,4)}
     </ul>
       
       </>
