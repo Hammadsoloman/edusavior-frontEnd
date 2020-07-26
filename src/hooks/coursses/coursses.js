@@ -34,7 +34,8 @@ const  useCoursses  = (token) => {
       .post(`${API}/addCoursetodashboard/${id}`)
       .set('authorization', `Bearer ${token}`)
       .then((response) => {
-          console.log('done', response.body);
+        let addedCourse = response.body.courses[response.body.courses.length -1];
+        setDashboardCourses([...dashboardCourses,addedCourse])
       })
       .catch(console.error);
     }

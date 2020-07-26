@@ -11,9 +11,9 @@ const SECRET = process.env.JWT_SECRET || 'mysecret';
 //////////////======================(useSignup hook)=====================\\\\\\\\\\\\\\
 
 const  useSignup  = () => {
-    const [signedUp, setsignedUp] = useState(false);
-    const [userSign , setUser] =  useState({});
-    const [token , setToken] =  useState({});
+    // const [signedUp, setsignedUp] = useState(false);
+    // const [userSign , setUser] =  useState({});
+    // const [token , setToken] =  useState({});
 
 ////////////////////////////////
 
@@ -27,8 +27,8 @@ const  useSignup  = () => {
             data: JSON.stringify(user)
           })
             .then(response => {
-
-                validateToken(response.data.token);
+              console.log('doneeeeeee');
+                // validateToken(response.data.token);
     
                 })
             .catch(console.error);
@@ -36,33 +36,33 @@ const  useSignup  = () => {
 
 ////////////////////////////////////
 
-    const logout = () => {
-        setSignupState(false, null, {});
-      }; 
+    // const logout = () => {
+    //     setSignupState(false, null, {});
+    //   }; 
 
 ////////////////////////////////////  
 
-    const  setSignupState = (signedUp, token, user) => {
-        cookie.save('auth', token);
-        setsignedUp(signedUp);
-        setToken(token);
-        setUser(user);
-      };
+    // const  setSignupState = (signedUp, token, user) => {
+    //     cookie.save('auth', token);
+    //     setsignedUp(signedUp);
+    //     setToken(token);
+    //     setUser(user);
+    //   };
 
 //////////////////////////////////
 
-    const  validateToken = (token) => {
-    try {
+  //   const  validateToken = (token) => {
+  //   try {
 
-      const user = jwt.verify(token, SECRET);
-      setSignupState(true, token, user);
-    } catch (e) {
-        setSignupState(false, null, {});
-      console.log('Token validation Error', e.message);
-    }
-  };
+  //     const user = jwt.verify(token, SECRET);
+  //     setSignupState(true, token, user);
+  //   } catch (e) {
+  //       setSignupState(false, null, {});
+  //     console.log('Token validation Error', e.message);
+  //   }
+  // };
 
-return [signedUp,userSign,signup , logout ,token]
+return [signup]
 }
 
 export default useSignup;

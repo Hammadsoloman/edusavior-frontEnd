@@ -5,7 +5,6 @@ import { Redirect } from "react-router-dom";
 //==================================()==================================\\
 
 import useLogin from './hooks/auth/auth';
-import useSignup from './hooks/auth/signup';
 import Show from './components/show/';
 import Login from  './components/signin/signin';
 import Logout from  './components/signup/signup';
@@ -14,69 +13,70 @@ import Footer from './components/footer/footer';
 import Home from './components/home/home';
 import Classes from './components/classes/classes';
 import Dashboard from './components/dashboard/dashboard';
-import Dash from './components/dash/dash';
 import AddCourse from './components/addcourse/addcourse'
 import Details from './components/details/details'
-// import useCoursses from './hooks/coursses/coursses';
 
 //====================================================================\\
 
 const App = (props) => {
 const [loggedIn,user,login,logedout , tokenSigned] = useLogin();
-const [signedUp,userSign,signup , logout ,token] = useSignup();
-let check = false;
-let log ;
-let userInfo;
-let mytoken;
-if(loggedIn){
-    check = loggedIn;
-    log = logedout;
-    userInfo = user;
-    mytoken = tokenSigned;
+
+// let check = false;
+// let log ;
+// let userInfo;
+// let mytoken;
+// if(loggedIn){
+//     check = loggedIn;
+//     log = logedout;
+//     userInfo = user;
+//     mytoken = tokenSigned;
     
-}else if(signedUp){
-    check = signedUp;
-    log = logout;
-    userInfo = userSign;
-    mytoken = token;
-}
-// const [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses] = useCoursses(mytoken);
-// useEffect(getCoursesFromDashboard, []);
-// console.log('dashboardCourses' , dashboardCourses);
+// }else if(signedUp){
+//     check = signedUp;
+//     log = logout;
+//     userInfo = userSign;
+//     mytoken = token;
+// }
+
 
         return(
             <>
             <BrowserRouter>
-            
-            <Show condition={!check }>
+
+            <Route exact path='/signup'>
+                <Logout  />
+            </Route>
+
+            <Show condition={!loggedIn }>
                  <Redirect to="/" /> 
-                <Login login={login}  ></Login>
-                <Logout signup={signup} />
+                 <Route exact path='/'>
+
+                <Login login={login}  />
+                 </Route>
             </Show>
 
-            <Show condition={check}>
+            <Show condition={loggedIn}>
 
-
-            <Header user ={userInfo} logout={log} />
+            <Header user ={user} logout={logedout} />
 
             <Route exact path='/'>
-                <Home token={mytoken}  user ={userInfo} />
+                <Home token={tokenSigned}  user ={user} />
             </Route>
 
             <Route exact path='/classes'>
-                <Classes token={mytoken}  user ={userInfo}/>
+                <Classes token={tokenSigned}  user ={user}/>
             </Route>
 
             <Route exact path='/dashboard'>
-                <Dashboard  token={mytoken}  user ={userInfo}/>
+                <Dashboard  token={tokenSigned}  user ={user}/>
             </Route>
 
             <Route exact path='/addcourse'>
-                <AddCourse token={mytoken}  user ={userInfo}/>
+                <AddCourse token={tokenSigned}  user ={user}/>
             </Route>
 
             <Route exact path='/details/:id'>
-                <Details token={mytoken}  user={userInfo}/>
+                <Details token={tokenSigned}  user={user}/>
             </Route> 
 
             <Footer/>
