@@ -65,7 +65,7 @@ const  useSignup  = () => {
     }
   };
 
-return [signedUp,userSign,signup , logout]
+return [signedUp,userSign,signup , logout ,token]
 }
 
 export default useSignup;

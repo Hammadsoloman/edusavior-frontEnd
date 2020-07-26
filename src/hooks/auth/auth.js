@@ -7,12 +7,17 @@ import superagent from 'superagent';
 dotenv.config();
 const API = process.env.API_SERVER || 'https://edusavior-backend.herokuapp.com';
 const SECRET = process.env.JWT_SECRET || 'mysecret';
+
 //////////////======================(useLogin hook)=====================\\\\\\\\\\\\\\
+
 const  useLogin  = () => {
+  
     const [loggedIn, setLoggedIn] = useState(false);
     const [user , setUser] =  useState({});
-    const [token , setToken] =  useState({});
+    const [tokenSigned , setToken] =  useState({});
+
 ////////////////////////////////
+
     const login = (username, password) => {
       console.log(username, password);
         superagent
@@ -23,18 +28,24 @@ const  useLogin  = () => {
       })
       .catch(console.error);
     }
+
 ////////////////////////////////////
+
     const logedout = () => {
         setLoginState(false, null, {});
       }; 
+
 ////////////////////////////////////    
+
     const  setLoginState = (loggedIn, token, user) => {
         cookie.save('auth', token);
         setLoggedIn(loggedIn);
         setToken(token);
         setUser(user);
       };
+
 //////////////////////////////////
+
     const  validateToken = (token) => {
     try {
 
@@ -47,13 +58,16 @@ const  useLogin  = () => {
   };
 
 ///////////////////////////////////////
+
 useEffect(()=>{
   const token = cookie.load('auth');
   validateToken(token);
 },[]);
 
+
 ///////////////////////////////////////
-return [loggedIn,user,login,logedout,token]
+
+return [loggedIn,user,login,logedout,tokenSigned]
 
 }
 

@@ -30,7 +30,7 @@ const Login = (props) => {
               onChange={handleChange}
             />
             <input
-              type="text"
+              type="password"
               name="password"
               placeholder="Enter Password"
               onChange={handleChange}
