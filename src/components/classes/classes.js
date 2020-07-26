@@ -8,7 +8,7 @@ import useCoursses from '../../hooks/coursses/coursses';
 const Classes = (props) => {
     const [allcourses,getCoursses,addCourses,addToDashboard] = useCoursses(props.token);
     useEffect(getCoursses, []);
-    
+
     return (
         <>
        

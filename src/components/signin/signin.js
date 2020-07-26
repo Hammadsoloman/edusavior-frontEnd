@@ -36,6 +36,7 @@ const Login = (props) => {
             />
             <button>Login</button>
           </form>
+          <span>don't have an account! <Link to="/signup">signup</Link></span>
         
       </>
     );
