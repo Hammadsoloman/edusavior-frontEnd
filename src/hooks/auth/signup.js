@@ -18,7 +18,6 @@ const  useSignup  = () => {
 ////////////////////////////////
 
     const signup = (user) => {
-        console.log('ffffffff' , user );
         axios({
             url:`${API}/signup`,
             method: 'post',
@@ -28,7 +27,6 @@ const  useSignup  = () => {
             data: JSON.stringify(user)
           })
             .then(response => {
-        console.log('dddddddddddddd' , response.data.token );
 
                 validateToken(response.data.token);
     
@@ -49,7 +47,6 @@ const  useSignup  = () => {
         setsignedUp(signedUp);
         setToken(token);
         setUser(user);
-        // this.setState({ token, loggedIn, user });
       };
 
 //////////////////////////////////
