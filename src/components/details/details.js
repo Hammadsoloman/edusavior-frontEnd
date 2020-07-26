@@ -14,6 +14,7 @@ const Details = ({match ,token}) => {
     return (
         <>
         <h1>Details</h1>
+        <Link to="/dashboard" >back to dashboard</Link>
         {courseDetial.map(item=>{
             return(
                 <section>
