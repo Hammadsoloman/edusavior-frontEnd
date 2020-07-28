@@ -10,6 +10,7 @@ const Header = (props) => {
           <li><NavLink to='/'>Home</NavLink></li>
           <li><NavLink to='/classes'>classes</NavLink></li>
           <li><NavLink to='/dashboard'>dashboard</NavLink></li>
+          <li><NavLink to='/QandA'>Q&A</NavLink></li>
         </ul>
         <button onClick={props.logout} >logout</button>
       </header>
