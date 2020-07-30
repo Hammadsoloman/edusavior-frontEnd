@@ -30,22 +30,15 @@ const Home = (props) => {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
-
-  // getCoursses(props.token)
-// import {useEffect} from 'react';
-// import cookie from 'react-cookies';
-// import useCoursses from '../../hooks/coursses/coursses';
-// const Home = (props) => {
-  // const [allcourses,getCoursses] = useCoursses(token);
   useEffect(getCoursses, []);
-  // console.log('allcourses', allcourses);
+
   return (
     <>
       <h3 className="COURSES">
         ABOUT US
       </h3>
       <p className="wlasac">
-      Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
       <hr></hr>
       <div className="vision">
         <img
@@ -55,13 +48,11 @@ const Home = (props) => {
           alt="Third slide"
         />
         <div className="visions">
-          {/* <h3 className="h3vision">Our vision</h3>
-          <p className="pvision">Our vision is to make the students practice at their place, first filling in gaps in their understanding and then accelerating their learning. so we provide you with some courses that you might need in your life to have a good educational background with a group of the best instructors in that field, also to reduce the gaps between the student and the instructor by doing a chat or by the all users by asking about something that you still uncleared for you, and the others will replay to your question.</p> */}
 
           <div>
             <h5 className="h5"> WELCOME TO EDUSAVIOUR</h5>
             <p className="wlc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
            </p>
           </div>
           <Button
@@ -112,22 +103,15 @@ const Home = (props) => {
         <h3 className="COURSES">
           OUR POPULAR COURSES
       </h3>
-      <p className="wlasac">
-      Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
-      <hr></hr>
+        <p className="wlasac">
+          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+        <hr></hr>
         <Container>
 
           {allcourses.map(item => {
             return (
               <Card style={{ width: '18rem' }} key={item._id}>
                 <Card.Img variant="top" src={item.img_url} />
-                {/* <div class="col-md-4 col-sm-6">
-            <div class="box">
-                <img src={item.img_url}></img>
-               
-               
-            </div>
-        </div> */}
                 <Card.Body>
                   <Card.Text className="subj">
                     {item.subject}
@@ -142,41 +126,25 @@ const Home = (props) => {
                   </Card.Text>
 
                   <Button
-            className="divbttn"
-            onClick={() => toggleShow(item._id)}
-            aria-controls="example-collapse-text"
-            aria-expanded={item.show}
-          >
-            View Details
-      </Button>
-          <Collapse in={item.show}>
-            <div className={`show-${item.show.toString()}`} id="example-collapse-text">
-            {item.description}
-        </div>
-          </Collapse>
-                  {/* {['bottom'].map((placement) => (
-                    <OverlayTrigger
-                      trigger="click"
-                      key={placement}
-                      placement={placement}
-                      overlay={
-                        <Popover id={`popover-positioned-${placement}`}>
-                          <Popover.Title as="h3">Description</Popover.Title>
-                          <Popover.Content>
-                            {item.description}
-                          </Popover.Content>
-                        </Popover>
-                      }
-                    >
-                      <Button variant="secondary">View Details</Button>
-                    </OverlayTrigger>
-                  ))} */}
+                    className="divbttn"
+                    onClick={() => toggleShow(item._id)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={item.show}
+                  >
+                    View Details
+                  </Button>
+                  <Collapse in={item.show}>
+                    <div className={`show-${item.show.toString()}`} id="example-collapse-text">
+                      {item.description}
+                    </div>
+                  </Collapse>
+
                   <div class="container">
-   
-       
-       
-   
-</div>
+
+
+
+
+                  </div>
                 </Card.Body>
               </Card>
             )
@@ -185,104 +153,104 @@ const Home = (props) => {
         </Container>
       </div>
       <h3 className="COURSES">
-          ACHIVEMENT
+        ACHIVEMENT
       </h3>
       <p className="wlasac">
-      Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
       <hr></hr>
       <MDBFooter color="mdb-color" className="font-smalll">
-      
-      <MDBContainer className="text-center text-md-left yy">
-        <MDBRow className="my-4">
-          <MDBCol md="4" lg="4">
-           
 
-          <img
-          className="d-bloo"
-
-          src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          alt="Third slide"
-        />
-          </MDBCol>
-         
-        </MDBRow>
-        
-        <div className="achivment">
-        <div class="container">
-  <div class="row">
-    <div class="col">
-      <h2 className="num">60</h2>
-      <h4 className="num4">Teachers</h4>
-    </div>
-    <div class="col">
-    <h2 className="num">40</h2>
-      <h4 className="num4">Courses</h4>    </div>
-  </div>
-  
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-    <h2 className="num">600</h2>
-      <h4 className="num4">Students</h4>    </div>
-    <div class="col">
-    <h2 className="num">1806</h2>
-      <h4 className="num4">SATISFIED CLIENT</h4>    </div>
-  </div>
-  
-</div>
+        <MDBContainer className="text-center text-md-left yy">
+          <MDBRow className="my-4">
+            <MDBCol md="4" lg="4">
 
 
-       </div> 
-  
+              <img
+                className="d-bloo"
 
-      </MDBContainer>
-      
-    </MDBFooter>
+                src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt="Third slide"
+              />
+            </MDBCol>
 
-    <h3 className="COURSES">
+          </MDBRow>
+
+          <div className="achivment">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2 className="num">60</h2>
+                  <h4 className="num4">Teachers</h4>
+                </div>
+                <div class="col">
+                  <h2 className="num">40</h2>
+                  <h4 className="num4">Courses</h4>    </div>
+              </div>
+
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2 className="num">600</h2>
+                  <h4 className="num4">Students</h4>    </div>
+                <div class="col">
+                  <h2 className="num">1806</h2>
+                  <h4 className="num4">SATISFIED CLIENT</h4>    </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+        </MDBContainer>
+
+      </MDBFooter>
+
+      <h3 className="COURSES">
         FEEDBACK
       </h3>
       <p className="wlasac">
-      Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
       <hr></hr>
-    <Carousel className="carousel-innner">
-  <Carousel.Item>
-    <img
-      className="d-blo"
-      src="https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-blo"
-      src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="Third slide"
-    />
+      <Carousel className="carousel-innner">
+        <Carousel.Item>
+          <img
+            className="d-blo"
+            src="https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-blo"
+            src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Third slide"
+          />
 
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-blo"
-      src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="Third slide"
-    />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-blo"
+            src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Third slide"
+          />
 
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </>
   );
 };
