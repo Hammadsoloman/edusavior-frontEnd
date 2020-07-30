@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+h3.header {
+    font-size: xxx-large;
+    // font-weight: 700;
+    font-family: fantasy;
+    color: white;
+    padding-bottom: 25px;
+    --animate-duration: 8s;
+    
+}
+.animate__animated.animate__bounceInLeft{
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+    --animate-duration: 2s;
+  }
+  .animate__animated.animate__pulse{
+    color: #a50808;
+    position: relative;
+    left: -58px;
+    top: 4px;
+    font-size: 23px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+
+.animate__animated.animate__bounceInRight{
+    font-size: 19px;
+    margin-top: 27px;
+    margin-bottom: -8px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    --animate-duration: 2s;
+  }
+// p.headeeer {
+//     color: #a50808;
+//     position: relative;
+//     left: -58px;
+//     top: 4px;
+//     font-size: 23px;
+// }
+p.phrases{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 50px;
+    color: #067306fc;
+}
+.container {
+    justify-content: center;
+}
+.aaa {
+    color: #8d968dfc !important;
+    text-decoration: none;
+    line-height: 2.6;
+    margin-right: 19px;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+a:hover{
+    color: #e9ecef !important;
+    text-decoration: none !important; 
+}
+img.d-block.w-100 {
+    height: 650px;
+   }
+
+
+.carousel-caption {
+    width: 68%;
+    position: absolute;
+    right: 54% !important; 
+    bottom: 30% !important;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    
+}
+span.navbar-brand {
+    margin-right: 44px;
+}
+.btn-outline-info {
+    color: #ca1616 !important;
+    border-color: #ca1616 !important;
+}
+a.active {
+    color: #b90911 !important;
+}
+.fixed-top {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: .85;
+    z-index: 200;
+}
+.black {
+    background-color:  #0a0a0a4f !important;
+}
+span.edusa {
+    margin-left: -27%;
+    line-height: 2;
+    font-size: 31px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 2px 2px 5px red;
+}
+.mr-auto.navbar-nav {
+    margin-left: 3%;
+}
+img.image {
+    height: 43px;
+    position: relative;
+    left: 23px;
+    top: 11px;
+    // margin-left: 362px;
+}
+.mr {
+    display: grid;
+    justify-content: center;
+}
+img.d-block  {
+    vertical-align: middle;
+    border-style: none;
+    opacity: 0.4;
+}
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+    background-color: #000000;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 27px !important;
+    margin-bottom: 0;
+    list-style: none;
+}
+img.imge.rounded {
+    height: 39px;
+    position: relative;
+    left: -66px;
+    padding-right: 5px;
+}
+.first.nav {
+    background: black;
+}
+span.welcome.navbar-brand {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
+img.imagee.rounded {
+    height: 23px;
+    margin-left: 35px;
+    margin-right: 12px;
+}
+.m {
+    /* display: grid; */
+    margin-left: 62%;
+}
+
+span.apply.navbar-brand {
+    font-size: 14px;
+    color: #b92423;
+    line-height: 1;
+    margin-left: 15px;
+}
+footer.page-footer.mdb-color.font-small.lighten-3.pt-4.mt-4 {
+    
+    background-image: url(http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/bg/counter-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
