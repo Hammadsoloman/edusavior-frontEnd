@@ -29,13 +29,15 @@ const Dashboard = (props) => {
         <li key={item._id}>
           <img src={item.img_url}/>
           <br/>
-          <span>course: {item.course_name}</span> 
+          <span>course Name: {item.course_name}</span> 
           <br/>
           <span>Course duration: {item.literature_time} </span> 
           <br/>
-          <span>{item.subject}   instructor: {item.instructor}</span> 
+          <span>subject: {item.subject}   instructor: {item.instructor}</span> 
           <br/>
-          <p>{item.description}</p>
+          <span>start_date: {item.start_date}</span> 
+          <br/>
+          <p>description: {item.description}</p>
           <button onClick={()=> delteCourse(item._id)}>X</button>
           <Link to={`details/${item._id}`}>View Details</Link>
           </li>
