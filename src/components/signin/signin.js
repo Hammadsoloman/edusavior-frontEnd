@@ -6,6 +6,9 @@ import '../signin/signin.scss';
 
 
 // import { Link, NavLink } from 'react-router-dom';
+// import { useState , useEffect} from 'react';
+
+import { Link, NavLink,withRouter } from 'react-router-dom';
 
 const Login = (props) => {
 
@@ -20,6 +23,7 @@ const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.login(user.username, user.password);
+    props.history.push('/')
   };
 
 
@@ -41,6 +45,7 @@ const Login = (props) => {
             />
             <button>Login</button>
           </form>
+          <span>don't have an account! <Link to="/signup">signup</Link></span>
         
      </>
     
@@ -48,4 +53,4 @@ const Login = (props) => {
 
 }
 
-export default Login;
+export default withRouter(Login);

@@ -3,6 +3,7 @@ footer.page-footer.mdb-color.font-small.lighten-3.pt-4.mt-4 {
     background-image: url(http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/bg/counter-bg.jpg);
     background-size: cover;
     background-attachment: fixed;
+    height: 403px;
 }
 .footer-copyright.text-center.py-3 {
     border-style: solid;
@@ -13,9 +14,12 @@ footer.page-footer.mdb-color.font-small.lighten-3.pt-4.mt-4 {
 }
 a.btn-floating.btn-small {
     font-size: x-large;
+    
 }
 .mb-4, .my-4 {
     color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+
     margin-bottom: 1.5rem!important;
 }
 .fa-dribbble {
@@ -59,6 +63,7 @@ a.edu{
 }
 h5.text-uppercase.mb-4.font-weight-bold {
     display: inline;
+    
 }
 img.imgg.rounded {
     height: 29px;
@@ -66,4 +71,28 @@ img.imgg.rounded {
 }
 h5.text-uppercase.mb-4.font-weight-bold.r {
     margin-left: 9px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.container.text-center.text-md-left {
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.ll {
+    color: #8b1817;
+    text-decoration: none;
+    background-color: transparent;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 17px;
+}
+
+.bbb {
+    margin-top: 17px;
+}
+.ttt {
+    margin-top: 17px;
 }

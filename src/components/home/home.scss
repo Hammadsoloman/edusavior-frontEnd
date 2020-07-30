@@ -1,9 +1,31 @@
-img.d-blo {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+img.d-blllo {
     vertical-align: middle;
     border-style: none;
-    height: 557px;
-    width: 42%;
+    height: 383px;
+        width: 42%;
     box-shadow: -3px 5px 27px grey;
+}
+h4.num4 {
+    text-align: center;
+    color: white;
+    margin-top: 32px;
+    font-size: 21px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h2.num {
+    font-weight: 600;
+    color: white;
+    font-size: 46px;
+    text-align: center;
+    margin-top: 21px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+p.bbbbb {
+    width: 100%;
+    margin-top: 20px;
 }
 .vision {
     display: flex;
@@ -18,7 +40,7 @@ img.d-blo {
 h3.h3vision {
     font-family: fantasy;
     word-spacing: 4px;
-    text-shadow: 2px 2px 5px red;
+    // text-shadow: 2px 2px 5px red;
 }
 
 p.pvision {
@@ -28,10 +50,13 @@ p.pvision {
 }
 
 button.divbttn {
-    background: darkgray;
-    border-color: #aba9a7;
+    background: #f3f3f3;
+    border-color: #f3f3f3;
     width: 99%;
+    color: black;
     height: 50px;
+    font-weight: 500;
+    font-size: 16px;
     border-radius: 2px;
 }
 button.divbttn:hover {
@@ -51,18 +76,23 @@ div#example-collapse-text {
     padding-left: 19px;
     padding-right: 9px;
     padding-bottom: 16px;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
     color: #8e8888d4;
 }
 
-button.divbttn.btn.btn-primary {
-    margin-bottom: 10px;
-}
+    button.divbttn.btn.btn-primary {
+        margin-bottom: 10px;
+        width: 125%;
+    }
+    
+
 
 
 h5.h5 {
     padding-bottom: 9px;
-    font-family: fantasy;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
     // text-shadow: 2px 2px 5px red;
 }
 
@@ -80,20 +110,221 @@ img.card-img-top {
 }
 h3.COURSES {
     text-align: center;
-    font-family: fantasy;
-    text-shadow: 2px 2px 5px red;
+    // text-shadow: 2px 2px 5px red;
     padding-top: 60px;
     padding-bottom: 20px;
-
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
     font-size: 43px;
 }
+.container.text-center.text-md-left.yy {
+    padding-top:7%;
+    padding-bottom: 3%;
+}
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 20px;
 
-
+    min-width: 0;
+    // margin-right: 51px;
+    width: 240px !important;
+    height: 174px;
+    border: 1px solid rgb(173, 173, 173);
+    max-width: 100%;
+}
+.col:hover {
+    
+    border: 1px solid rgb(211, 11, 11);
+}
 .cour {
     background: #f0f0f0cc;
-    // padding-top: 37px;
+    padding: 2.5%;
 }
 p.wlc {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+}
+// .show-true{
+// display: block;
+// }
+// .show-false{
+//     display: none;
+//     }
+footer.page-footer.mdb-color.font-smalll{
+    background-image: url(http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/bg/counter-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+.card-title {
+    margin-bottom: .75rem;
     font-family: fantasy;
-    font-size: 18px;
+}
+p.card-text {
+    font-size: 12px;
+    font-family: unset;
+}
+p.subj.card-text {
+    text-align: center;
+    font-size: 17px;
+    color: red;
+    /* font-weight: 700; */
+    font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bolder;
+}
+
+p.wlasac {
+    text-align: center;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 10%;
+    border: 0;
+    border-top: 3px solid red !important;
+}
+ img.card-img-top:hover {
+    -webkit-filter: brightness(50%);
+    transition: 0.7s ease-in-out;
+    // -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    5% { opacity:.5; }
+    100% { opacity:1; }
+}
+.box{
+    font-family: 'Bellota', cursive;
+    overflow: hidden;
+    position: relative;
+}
+.box:before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all 0.6s ease 0s;
+}
+.box:hover:before{ border: 270px solid rgba(0,0,0,0.5); }
+.box img{
+    width: 100%;
+    height: auto;
+    transform-origin: right center;
+    transition: all .4s ease-in-out;
+}
+.box:hover img{ transform: scale(1.2); }
+.box .box-content{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.1);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transition: all 0.4s ease 0.1s;
+}
+.box:hover .box-content{
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+.box .title{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    margin: 0;
+}
+.box .post{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.box .icon li{
+    margin: 0 0 0 2px;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0;
+    transition: 0.4s ease 0.3s;
+}
+.box:hover .icon li{ opacity: 1; }
+.box:hover .icon li:nth-child(1){ transition-delay: 0.4s; }
+.box .icon li a{
+    color: #111;
+    background: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+.box .icon li a:hover{
+    line-height: 40px;
+    height: 40px;
+    box-shadow: 0 0 5px #999 inset;
+}
+@media only screen and (max-width:990px){
+    .box { margin: 0 0 30px; }
+}
+.achivment {
+    position: relative;
+    top: -11px;
+    width: 53%;
+}
+// h3.aa {
+//     color: white;
+// }
+.bb {
+    display: inline;
+    position: relative;
+    top: 32px;
+    left: 64px;
+    /* color: white; */
+}
+img.d-bloo {
+    position: relative;
+    top: -13px;
+    height: 385px;
+    width: 365%;
+    left: -58px;
+}
+
+.carousel-innner {
+    position: relative;
+    width: 63%;
+    height: 429px;
+    margin-left: 16%;
+    overflow: hidden;
+    margin-bottom: 54px;
+}
+img.d-blo {
+    vertical-align: middle;
+    border-style: none;
+    height: 430px;
+    width: 51%;
+    margin-left: 23%;
+    box-shadow: -3px 5px 27px grey;
 }

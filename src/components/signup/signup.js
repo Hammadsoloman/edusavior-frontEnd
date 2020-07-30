@@ -3,12 +3,13 @@ import { useState , useEffect} from 'react';
 
 // import Show from '../show/';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink,withRouter } from 'react-router-dom';
+import useSignup from '../../hooks/auth/signup';
 
 const Signup = (props) => {
 
  const [user , setuser] =  useState({});
-
+ const [signup] = useSignup();
  const handleChange = (e) => {
   setuser({...user, [e.target.name]: e.target.value });
   };
@@ -16,7 +17,8 @@ const Signup = (props) => {
  const handleSubmit = (e) => {
     e.preventDefault();
     e.target.reset();
-    props.signup(user);
+    signup(user);
+    props.history.push('/')
   };
     return (
       <>
@@ -47,10 +49,11 @@ const Signup = (props) => {
             </select>
             <button>Signup</button>
           </form>
+          <span>back to <Link to="/">signin</Link></span>
         
       </>
     );
   
 }
 
-export default Signup;
+export default withRouter(Signup);

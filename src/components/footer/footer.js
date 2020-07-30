@@ -24,7 +24,7 @@ const FooterPagePro = () => {
   return (
 
     <MDBFooter color="mdb-color" className="font-small lighten-3 pt-4 mt-4">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"></link>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossOrigin="anonymous"></link>
       <MDBContainer className="text-center text-md-left">
         <MDBRow className="my-4">
           <MDBCol md="4" lg="4">
@@ -34,31 +34,33 @@ const FooterPagePro = () => {
               EDUSAVIOUR
             </h5>
 
-            <p>
+            <p className="bbbbb">
               EDUSAVIOUR covers a wide range of academic learning, allowing you to supplement your studies with some additional knowledge.
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2" lg="2" className="ml-auto">
-            <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
+            <h5 className="text-uppercase mb-4 font-weight-bold mmm" >About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="#!">COURSES</a>
+                <a className="ll"  href="#!">COURSES</a>
               </p>
               <p>
-                <a href="#!">ABOUT US</a>
+                <a className="ll"  href="#!">ABOUT US</a>
               </p>
               <p>
-                <a href="#!">CONTACT</a>
+                <a className="ll"  href="#!">CONTACT</a>
               </p>
               <p>
-                <a href="#!">HELP</a>
+                <a className="ll"  href="#!">HELP</a>
               </p>
             </ul>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="5" lg="3">
-            <h5 className="text-uppercase mb-4 font-weight-bold">Address</h5>
+            <h5 className="text-uppercase mb-4 font-weight-bold mmm">Address</h5>
+            <div className="bbb">
+
             <p>
               <i className="fa fa-home mr-3" /> Amman ,JORDAN
             </p>
@@ -71,13 +73,16 @@ const FooterPagePro = () => {
             <p>
               <i className="fa fa-print mr-3" /> + 01 234 567 89
             </p>
+            </div>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2" lg="2" className="text-center">
             <h5 className="text-uppercase mb-4 font-weight-bold">
               Follow us
             </h5>
-            <div className="mt-2 ">
+            <div className="ttt">
+
+            <div className="mt-2 oo ">
               <a type="button" className="btn-floating btn-small btn-fb">
                 <i className="fab fa-facebook-f" />
               </a>
@@ -90,6 +95,7 @@ const FooterPagePro = () => {
               <a type="button" className="btn-floating btn-small btn-dribbble">
                 <i className="fab fa-dribbble" />
               </a>
+            </div>
             </div>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
