@@ -25,24 +25,27 @@ const Signup = (props) => {
           <span>Sign up</span>
           <form onSubmit={handleSubmit}>
             <input
+            required
               type="text"
               name="username"
               placeholder="Enter Username"
               onChange={handleChange}
             />
             <input
+            required
               type="password"
               name="password"
               placeholder="Enter Password"
               onChange={handleChange}
             />
             <input
+            required
               type="text"
               name="email"
               placeholder="Enter your email"
               onChange={handleChange}
             />
-            <select name="role" onChange={handleChange}>
+            <select required name="role" onChange={handleChange}>
             <option selected disabled>Choose your role</option>
                 <option value='student'>student</option>
                 <option value='instructor'>instructor</option>

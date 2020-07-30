@@ -1,14 +1,10 @@
 import React from 'react';
 import {useEffect} from 'react';
 import cookie from 'react-cookies';
-
-// import './header.scss';
 import useCoursses from '../../hooks/coursses/coursses';
-// import { Link, NavLink } from 'react-router-dom';
 const Home = (props) => {
   const token = cookie.load('auth');
   const [allcourses,getCoursses] = useCoursses(token);
-  // getCoursses(props.token)
   useEffect(getCoursses, []);
 console.log('allcourses',allcourses);
 const handleSubmit = (e) =>{}
