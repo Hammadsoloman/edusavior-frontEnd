@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect} from 'react';
+import './details.scss';
 
 import { Link, NavLink ,withRouter} from 'react-router-dom';
 
@@ -21,6 +22,7 @@ const Details = ({match ,token}) => {
             <br/>
             <span>instructor Name: {item.instructor}</span>
             <br/>
+            <img src={item.img_url}/>
             <span>Course Name: {item.course_name}</span>
             <br/>
             <span>subject: {item.subject}</span>
