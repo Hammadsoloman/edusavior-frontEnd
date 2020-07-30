@@ -24,7 +24,11 @@ const  useLogin  = () => {
       .post(`${API}/signin`)
       .set('authorization', `Basic ${btoa(`${username}:${password}`)}`)
       .then((response) => {
-        validateToken(response.body.token);
+        if(response.body.token){
+          validateToken(response.body.token);
+        }else{
+          setUser(response.body.user)
+        }
       })
       .catch(console.error);
     }

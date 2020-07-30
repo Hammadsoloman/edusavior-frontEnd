@@ -20,7 +20,7 @@ import Question from './components/questions/questions';
 //====================================================================\\
 
 const App = (props) => {
-    const [loggedIn, user, login, logedout, tokenSigned] = useLogin();
+    let [loggedIn, user, login, logedout, tokenSigned] = useLogin();
 
     // let check = false;
     // let log ;
@@ -45,14 +45,18 @@ const App = (props) => {
             <BrowserRouter>
 
                 <Route exact path='/signup'>
+                    
                     <Logout />
                 </Route>
 
                 <Show condition={!loggedIn}>
                     <Redirect to="/" />
                     <Route exact path='/'>
-
                         <Login login={login} />
+                        <Show condition={user === 'wrong password' || user === 'user not found'}>
+                        <span>{user}</span>
+                        </Show>
+
                     </Route>
                 </Show>
 
