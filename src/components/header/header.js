@@ -8,16 +8,6 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import cookie from 'react-cookies';
 
-
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-// import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl';
-
-
-
-
-
-
 import Button from 'react-bootstrap/Button';
 
 // import { Redirect } from "react-router-dom";
@@ -37,7 +27,7 @@ const Header = (props) => {
           <NavLink  className="aaa" to='/classes'>CLASSES</NavLink>
           <NavLink  className="aaa" to="/dashboard">DASHBOARD</NavLink>
           <NavLink  className="aaa" to='/about'>ABOUT US</NavLink>
-
+          <NavLink  className="aaa" to='/QandA'>QandA</NavLink>
         </Nav>
         <span>{user.username}</span>
     <img src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
