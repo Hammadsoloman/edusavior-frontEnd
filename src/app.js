@@ -20,7 +20,7 @@ import Question from './components/questions/questions';
 //====================================================================\\
 
 const App = (props) => {
-    let [loggedIn, user, login, logedout, tokenSigned] = useLogin();
+    let [loggedIn, user, login, logedout, tokenSigned ] = useLogin();
 
     // let check = false;
     // let log ;
@@ -62,7 +62,7 @@ const App = (props) => {
 
                 <Show condition={loggedIn}>
 
-                    <Header user={user} logout={logedout} />
+                    <Header  user={user} logout={logedout} />
 
                     <Route exact path='/'>
                         <Home token={tokenSigned} user={user} />
@@ -73,7 +73,7 @@ const App = (props) => {
                     </Route>
 
                     <Route exact path='/dashboard'>
-                        <Dashboard token={tokenSigned} user={user} />
+                        <Dashboard  token={tokenSigned} user={user} />
                     </Route>
 
                     <Route exact path='/addcourse'>
