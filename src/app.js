@@ -17,27 +17,14 @@ import AddCourse from './components/addcourse/addcourse'
 import Details from './components/details/details'
 import Question from './components/questions/questions';
 
+
+
 //====================================================================\\
 
 const App = (props) => {
     const [loggedIn, user, login, logedout, tokenSigned] = useLogin();
 
-    // let check = false;
-    // let log ;
-    // let userInfo;
-    // let mytoken;
-    // if(loggedIn){
-    //     check = loggedIn;
-    //     log = logedout;
-    //     userInfo = user;
-    //     mytoken = tokenSigned;
-
-    // }else if(signedUp){
-    //     check = signedUp;
-    //     log = logout;
-    //     userInfo = userSign;
-    //     mytoken = token;
-    // }
+ 
 
 
     return (
@@ -82,6 +69,8 @@ const App = (props) => {
                     <Route exact path='/QandA'>
                         <Question token={tokenSigned} user={user} />
                     </Route>
+
+                
 
                     <Footer />
 
