@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './home.scss';
+import cookie from 'react-cookies';
 import useCoursses from '../../hooks/coursses/coursses';
 // import { Link, NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
@@ -24,12 +25,18 @@ import Image from 'react-bootstrap/Image';
 
 
 const Home = (props) => {
-  const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses, delteCourse, toggleShow] = useCoursses(props.token);
+  const token = cookie.load('auth');
+  const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses, delteCourse, toggleShow] = useCoursses(token);
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
 
   // getCoursses(props.token)
+// import {useEffect} from 'react';
+// import cookie from 'react-cookies';
+// import useCoursses from '../../hooks/coursses/coursses';
+// const Home = (props) => {
+  // const [allcourses,getCoursses] = useCoursses(token);
   useEffect(getCoursses, []);
   // console.log('allcourses', allcourses);
   return (

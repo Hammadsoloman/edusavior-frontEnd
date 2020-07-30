@@ -32,12 +32,14 @@ const Login = (props) => {
       <span>Sign in</span>
           <form onSubmit={handleSubmit}>
             <input
+            required
               type="text"
               name="username"
               placeholder="Enter Username"
               onChange={handleChange}
             />
             <input
+            required
               type="password"
               name="password"
               placeholder="Enter Password"

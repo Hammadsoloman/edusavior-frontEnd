@@ -6,6 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Carousel from 'react-bootstrap/Carousel';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import cookie from 'react-cookies';
+
 
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Form from 'react-bootstrap/Form';
@@ -20,6 +22,7 @@ import Button from 'react-bootstrap/Button';
 
 // import { Redirect } from "react-router-dom";
 const Header = (props) => {
+  const user = cookie.load('user');
   
   return (
     <header>
@@ -36,7 +39,8 @@ const Header = (props) => {
           <NavLink  className="aaa" to='/about'>ABOUT US</NavLink>
 
         </Nav>
-
+        <span>{user.username}</span>
+    <img src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
         <Button className="vanbttn" variant="outline-info" onClick={props.logout}>logout</Button>
 
       </Navbar>
@@ -112,3 +116,28 @@ const Header = (props) => {
 
 export default Header;
 
+// import { Redirect } from "react-router-dom";
+// import cookie from 'react-cookies';
+
+// const Header = (props) => {
+//   // console.log('fffffffffffffff' , props.userInfo);
+//   const user = cookie.load('user');
+//     return (
+//         <header>
+//         <h1>Header</h1>
+
+//         <ul>
+//           <li><NavLink to='/'>Home</NavLink></li>
+//           <li><NavLink to='/classes'>classes</NavLink></li>
+//           <li><NavLink to='/dashboard'>dashboard</NavLink></li>
+//           <li><NavLink to='/QandA'>Q&A</NavLink></li>
+//         </ul>
+//     <span>{user.username}</span>
+//     <img src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
+//         <button onClick={props.logout} >logout</button>
+//       </header>
+//     );
+//     };
+   
+    
+// export default Header;

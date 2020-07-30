@@ -15,10 +15,10 @@ const Details = ({match ,token}) => {
         {courseDetial.map(item=>{
             return(
                 <section>
-            <iframe width="1080" height="615" src={`${item.url}`}
+            {/* <iframe width="1080" height="615" src={`${item.url ||}`}
              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
-              </iframe>
+              </iframe> */}
               <br/>
             <span>Course Name: {item.course_name}</span>
             <br/>
