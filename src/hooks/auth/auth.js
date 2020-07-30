@@ -14,6 +14,7 @@ const  useLogin  = () => {
   
     const [loggedIn, setLoggedIn] = useState(false);
     const [user , setUser] =  useState({});
+    const [userInfo , setUserInfo] = useState({});
     const [tokenSigned , setToken] =  useState({});
 
 ////////////////////////////////
@@ -25,6 +26,9 @@ const  useLogin  = () => {
       .set('authorization', `Basic ${btoa(`${username}:${password}`)}`)
       .then((response) => {
         if(response.body.token){
+          console.log('userrrrrrrr' , response.body.user);
+          // setUserInfo(response.body.user)
+          cookie.save('user', response.body.user)
           validateToken(response.body.token);
         }else{
           setUser(response.body.user)
@@ -65,13 +69,14 @@ const  useLogin  = () => {
 
 useEffect(()=>{
   const token = cookie.load('auth');
+  const user = cookie.load('user');
   validateToken(token);
 },[]);
 
 
 ///////////////////////////////////////
 
-return [loggedIn,user,login,logedout,tokenSigned]
+return [loggedIn,user,login,logedout,tokenSigned ,userInfo]
 
 }
 
