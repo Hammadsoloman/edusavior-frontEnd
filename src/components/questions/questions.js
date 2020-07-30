@@ -4,9 +4,13 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Redirect } from "react-router-dom";
 import useQuestion from '../../hooks/q&a/question_answer';
-import Show from '../show/index'
+import Show from '../show/index';
+import cookie from 'react-cookies';
+
 const Header = (props) => {
-    const [allQuestions, getQuestions, addCQuestion, delteQuestion , addAnswer , delteAnswer] = useQuestion(props.token);
+    const [allQuestions, getQuestions, addCQuestion, delteQuestion, addAnswer, delteAnswer] = useQuestion(props.token);
+    const user = cookie.load('user');
+
     const [oneQuestion, setQuestion] = useState({});
     const [oneAnswer, setAnswer] = useState({});
     const handleChange = (e) => {
@@ -22,7 +26,7 @@ const Header = (props) => {
     }
     const handleSubmitAnswer = (id) => {
         // e.preventDefault();
-        addAnswer(oneAnswer, id,props.user.username);
+        addAnswer(oneAnswer, id, props.user.username);
         // e.target.reset();
     }
 
@@ -52,6 +56,7 @@ const Header = (props) => {
                 {allQuestions.map(question => {
                     return (
                         <li key={question._id}>
+                            <img src={question.profile_img ? question.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
                             <span>{question.usrename}</span>
                             <br />
                             <span>{question.title}</span>
@@ -59,7 +64,7 @@ const Header = (props) => {
                             <Show condition={props.user.username == question.usrename}>
                                 <button onClick={() => delteQuestion(question._id)}>X</button>
                             </Show>
-                            <form onSubmit={(e)=>{e.preventDefault()  ;handleSubmitAnswer(question._id) ;e.target.reset()}}>
+                            <form onSubmit={(e) => { e.preventDefault(); handleSubmitAnswer(question._id); e.target.reset() }}>
                                 <input
                                     type="text"
                                     name="content"
@@ -72,11 +77,12 @@ const Header = (props) => {
                                 {question.answers.map(answer => {
                                     return (
                                         <li key={answer._id}>
+                                            <img src={answer.profile_img ? answer.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
                                             <span>{answer.username}</span>
                                             <p>{answer.content}</p>
                                             <Show condition={props.user.username == answer.username}>
-                                <button onClick={() => delteAnswer(question._id , answer._id)}>X</button>
-                            </Show>
+                                                <button onClick={() => delteAnswer(question._id, answer._id)}>X</button>
+                                            </Show>
                                         </li>
                                     )
                                 })}

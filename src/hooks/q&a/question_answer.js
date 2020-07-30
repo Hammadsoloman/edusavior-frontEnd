@@ -26,6 +26,7 @@ const  useQuestion  = (token) => {
       .set('authorization', `Bearer ${token}`)
       .send(body)
       .then((response) => {
+        console.log('response.body' ,response.body);
         setQuestions([...allQuestions,response.body])
       })
       .catch(console.error);
