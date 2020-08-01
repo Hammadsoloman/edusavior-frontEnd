@@ -9,14 +9,22 @@ const  useCoursses  = (token) => {
     const [allcourses, setAllcourses] = useState([]);
     const [dashboardCourses, setDashboardCourses] = useState([]);
     const getCoursses =   () => {
-        superagent
-      .get(`${API}/allCourses`)
-      .set('authorization', `Bearer ${token}`)
-      .then((response) => {
-          setAllcourses(response.body.allCourses);
-      })
-      .catch(console.error);
-    }
+      //   console.log(token);
+          superagent
+        .get(`${API}/allCourses`)
+        .set('authorization', `Bearer ${token}`)
+        .then((response) => {
+          //   console.log('sssssssss', response.body.allCourses);
+          let arr = response.body.allCourses.map(val => {
+            val.show = false;
+            return val
+          });
+          // console.log('sdsddddddd' , arr);
+            setAllcourses(arr);
+          // validateToken(response.body);
+        })
+        .catch(console.error);
+      }
 
     const addCourses = (course) =>{
       superagent
@@ -63,8 +71,21 @@ const  useCoursses  = (token) => {
     .catch(console.error);
   }
 
+  const toggleShow = (id) =>{
+    let arr = allcourses.map(val => {
+      if(val._id === id){
+        val.show ? val.show =false : val.show =true;
+        return val
+      }else{
+        return val
+      }
+     } );
+// console.log('array' , arr);
+    setAllcourses(arr)
+  }
+
     
-    return [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse]
+    return [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse , toggleShow]
 }
 
 export default useCoursses;
