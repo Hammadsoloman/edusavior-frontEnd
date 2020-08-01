@@ -104,7 +104,7 @@ const Home = (props) => {
           OUR POPULAR COURSES
       </h3>
         <p className="wlasac">
-          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
         <hr></hr>
         <Container>
 
