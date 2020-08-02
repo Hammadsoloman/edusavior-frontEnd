@@ -2,24 +2,17 @@ import React from 'react';
 import {useEffect} from 'react';
 import Show from '../show/index'
 // import './header.scss';
-import cookie from 'react-cookies';
 import useCoursses from '../../hooks/coursses/coursses';
-// import { Link, NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import Collapse from 'react-bootstrap/Collapse';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Modal';
-import Col from 'react-bootstrap/Col';
-
-
 import Carousel from 'react-bootstrap/Carousel';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Image from 'react-bootstrap/Image';
 import { Link, NavLink } from 'react-router-dom';
-
 import '../../components/classes/classes.scss';
+
+
 
 const Classes = (props) => {
     const [allcourses,getCoursses,addCourses,addToDashboard] = useCoursses(props.token);
@@ -27,37 +20,6 @@ const Classes = (props) => {
 
     return (
         <>
-            
-            {/* <h1>classes</h1>
-            <ul className="ulClasses">
-      
-      {allcourses.map(item=>{
-        return (
-          <div className="div1">
-            <div className="div2">
-        <li className="liClasses" key={item._id}>
-          <div className="imgClasses"><img className="card-img" src={item.img_url} /></div>
-          <br/>
-          <span className="spanClasses">Course name: {item.course_name}</span> 
-          <br/>
-          <span className="spanClasses">Course duration: {item.literature_time} </span> 
-          <br/>
-          <span className="spanClasses">{item.subject}   instructor: {item.instructor}</span> 
-          <br/>
-          <p className="pClasses">Course description{item.description} </p>
-          <button className="butClasses"onClick={()=> addToDashboard(item._id) }>Add To Dashboard</button>
-          <br></br>
-          </li> 
-          </div>
-         </div>
-        )
-      })}
-    </ul>
-
-        <Show className="showClasses" condition={props.user.role==='instructor'}>
-            <NavLink className="navLinkClasses" to="/addcourse">add course</NavLink>
-        </Show> */}
-       
        <div className="classes">
         <h3 className="CLASSES">
           OUR CLASSES
