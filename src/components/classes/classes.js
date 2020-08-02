@@ -4,9 +4,13 @@ import Show from '../show/index'
 // import './header.scss';
 import { Link, NavLink } from 'react-router-dom';
 import useCoursses from '../../hooks/coursses/coursses';
+import cookie from 'react-cookies';
 
 const Classes = (props) => {
-    const [allcourses,getCoursses,addCourses,addToDashboard] = useCoursses(props.token);
+    const [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse , toggleShow ,deleteCourseFromCourses] = useCoursses(props.token);
+  const user = cookie.load('user');
+     
+
     useEffect(getCoursses, []);
 
     return (
@@ -27,6 +31,10 @@ const Classes = (props) => {
           <span>{item.subject}   instructor: {item.instructor}</span> 
           <br/>
           <p>{item.description}</p>
+          <Show condition ={user.username === item.instructor}>
+
+          <button onClick={()=> deleteCourseFromCourses(item._id) }>X</button>
+          </Show>
           <button onClick={()=> addToDashboard(item._id) }>Add To Dashboard</button>
           </li>
         )
