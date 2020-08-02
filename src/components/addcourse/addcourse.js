@@ -62,12 +62,12 @@ const Addcourse = (props) => {
             {/* ------------start date------------- */}
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Start Date</Form.Label>
-              <Form.Control className="inputaddcourse" type="date" name="start_date"  onChange={handleChange} />
+              <Form.Control className="inputaddcourse" type="date" name="start_date" onChange={handleChange} />
             </Form.Group>
             {/* ------------duration------------ */}
             <Form.Group className="label4">
               <Form.Label>Duration Time</Form.Label>
-              <Form.Control className="inputaddcourse" type="time" name="literature_time"  onChange={handleChange} />
+              <Form.Control className="inputaddcourse" type="time" name="literature_time" onChange={handleChange} />
             </Form.Group>
             {/* ------------Image Address------------- */}
             <Form.Group>
@@ -77,6 +77,10 @@ const Addcourse = (props) => {
                 </InputGroup.Prepend>
                 <Form.Control className="inputaddcourse" id="inlineFormInputGroup" type="text" name="img_url" placeholder="poster for the course" onChange={handleChange} />
               </InputGroup>
+            </Form.Group>
+            {/* -----------add image from device---------- */}
+            <Form.Group>
+            <Form.File className="label7" label="add image from device" />
             </Form.Group>
             {/* --------description----------- */}
             <Form.Group controlId="exampleForm.ControlTextarea1">
