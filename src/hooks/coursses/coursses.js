@@ -37,15 +37,21 @@ const  useCoursses  = (token) => {
       .catch(console.error);
     }
     const addToDashboard = (id) =>{
-      console.log('iddd' , id);
-      superagent
-      .post(`${API}/addCoursetodashboard/${id}`)
-      .set('authorization', `Bearer ${token}`)
-      .then((response) => {
-        let addedCourse = response.body.courses[response.body.courses.length -1];
-        setDashboardCourses([...dashboardCourses,addedCourse])
-      })
-      .catch(console.error);
+      // console.log('iddd' , id);
+      // let course = dashboardCourses.filter(listItem => listItem._id == id );
+      // console.log('dashboardCourses' ,dashboardCourses);
+      // console.log('course' , course);
+      // if(course.length == 0){
+        superagent
+        .post(`${API}/addCoursetodashboard/${id}`)
+        .set('authorization', `Bearer ${token}`)
+        .then((response) => {
+          let addedCourse = response.body.courses[response.body.courses.length -1];
+          setDashboardCourses([...dashboardCourses,addedCourse])
+          
+        })
+        .catch(console.error);
+      // }
     }
     const getCoursesFromDashboard =   () => {
       
@@ -70,7 +76,16 @@ const  useCoursses  = (token) => {
     })
     .catch(console.error);
   }
-
+  const deleteCourseFromCourses = (id) =>{
+    superagent
+    .delete(`${API}/deleteCourse/${id}`)
+    .set('authorization', `Bearer ${token}`)
+    .then((response) => {
+      let arr = allcourses.filter(listItem => listItem._id != id );
+      setAllcourses(arr);
+    })
+    .catch(console.error);
+  }
   const toggleShow = (id) =>{
     let arr = allcourses.map(val => {
       if(val._id === id){
@@ -80,12 +95,11 @@ const  useCoursses  = (token) => {
         return val
       }
      } );
-// console.log('array' , arr);
     setAllcourses(arr)
   }
 
     
-    return [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse , toggleShow]
+    return [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse , toggleShow ,deleteCourseFromCourses]
 }
 
 export default useCoursses;

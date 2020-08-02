@@ -29,6 +29,7 @@ const Header = (props) => {
           <NavLink  className="aaa" to="/dashboard">DASHBOARD</NavLink>
           <NavLink  className="aaa" to="/QandA">Q&A</NavLink>
           <NavLink  className="aaa" to='/about'>ABOUT US</NavLink>
+           <NavLink  className="aaa" to='/appointments'>Appointments</NavLink>
         </Nav>
        <img className="userImage" src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
         <span className="userName">{user.username}</span>
