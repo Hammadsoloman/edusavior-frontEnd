@@ -21,16 +21,17 @@ const Header = (props) => {
 
         <Nav className="mr-auto">
        
-      <Image className='imge' src="https://s3.amazonaws.com/designmantic-logos/logos/2020/Jul/medium-1940-5f1eeefc492ad.png" rounded />
-           <p className="headeeer" className="animate__animated animate__pulse animate__infinite">EDUSAVIOUR</p>
+      {/* <Image className='imge' src="https://s3.amazonaws.com/designmantic-logos/logos/2020/Jul/medium-1940-5f1eeefc492ad.png" rounded /> */}
+        <i class='fas fa-graduation-cap fa-pull-left fa-3x'></i>
+           <p className="headeeer" className="animate__animated animate__pulse animate__infinite">EDUSAVIOR</p>
           <NavLink className="aaa" to='/'>HOME</NavLink>
           <NavLink  className="aaa" to='/classes'>CLASSES</NavLink>
           <NavLink  className="aaa" to="/dashboard">DASHBOARD</NavLink>
+          <NavLink  className="aaa" to="/QandA">Q&A</NavLink>
           <NavLink  className="aaa" to='/about'>ABOUT US</NavLink>
-          <NavLink  className="aaa" to='/QandA'>QandA</NavLink>
         </Nav>
-        <span>{user.username}</span>
-    <img src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
+       <img className="userImage" src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
+        <span className="userName">{user.username}</span>
         <Button className="vanbttn" variant="outline-info" onClick={props.logout}>logout</Button>
 
       </Navbar>
@@ -40,7 +41,7 @@ const Header = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100" 
-            src="https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500?text=First slide & bg=373940"
+            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/slider/home1/slide1.jpg?text=First slide & bg=373940"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -57,7 +58,7 @@ const Header = (props) => {
           <img
             className="d-block w-100"
 
-            src=" https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500/800x400?text=Second slide&bg=282c34"
+            src=" http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/slider/home1/slide2.jpg?text=Second slide&bg=282c34"
             alt="Third slide"
           />
 
@@ -71,7 +72,7 @@ const Header = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src=" https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500/800x400 ?text=Third slide&bg=20232a"
+            src=" http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/slider/home1/slide3.jpg?text=Third slide&bg=20232a"
             alt="Third slide"
           />
 
@@ -87,47 +88,6 @@ const Header = (props) => {
     </header>
   );
 };
-// class Header extends React.Component   {
-//   constructor(props){
-//     super(props)
-//   }
-//   render(){
-//     if(!this.props.loggedIn){
-//      return <Redirect to="/" /> 
-//     }
-//     return (
-//         <header>
-//         <h1>Header</h1>
-//         <button onClick={this.props.logout} >logout</button>
-//       </header>
-//     );
-//   }
-//   };
 
 export default Header;
 
-// import { Redirect } from "react-router-dom";
-// import cookie from 'react-cookies';
-
-// const Header = (props) => {
-//   // console.log('fffffffffffffff' , props.userInfo);
-//   const user = cookie.load('user');
-//     return (
-//         <header>
-//         <h1>Header</h1>
-
-//         <ul>
-//           <li><NavLink to='/'>Home</NavLink></li>
-//           <li><NavLink to='/classes'>classes</NavLink></li>
-//           <li><NavLink to='/dashboard'>dashboard</NavLink></li>
-//           <li><NavLink to='/QandA'>Q&A</NavLink></li>
-//         </ul>
-//     <span>{user.username}</span>
-//     <img src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
-//         <button onClick={props.logout} >logout</button>
-//       </header>
-//     );
-//     };
-   
-    
-// export default Header;

@@ -65,9 +65,10 @@ h5.text-uppercase.mb-4.font-weight-bold {
     display: inline;
     
 }
-img.imgg.rounded {
-    height: 29px;
-    display: inline;
+.imgg {
+    position: relative ;
+    left: 7px !important;
+    line-height: 1 !important;
 }
 h5.text-uppercase.mb-4.font-weight-bold.r {
     margin-left: 9px;
