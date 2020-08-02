@@ -4,7 +4,7 @@ import Show from '../show/index'
 import cookie from 'react-cookies';
 import useCoursses from '../../hooks/coursses/coursses';
 
-import cookie from 'react-cookies';
+// import cookie from 'react-cookies';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -24,7 +24,7 @@ const Classes = (props) => {
      
 
     useEffect(getCoursses, []);
-    const user = cookie.load('user');
+    // const user = cookie.load('user');
     return (
     
         <>
