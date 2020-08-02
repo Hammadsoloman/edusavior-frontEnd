@@ -1,0 +1,95 @@
+.sidenav---sidenav---_2tBP.sidenav---collapsed---LQDEv {
+    position: fixed;
+    top: 65px !important;
+    bottom: 0;
+    left: 0;
+    z-index: 1006;
+    height: 120px !important;
+    min-width: 64px;
+    background: #db3d44;
+    transition: min-width 0.2s;
+    border-radius: 0px 10px 10px 0px;
+    p.profileside {
+       
+        display: none;
+    }
+}
+.sidenav---sidenav---_2tBP.sidenav---expanded---1KdUL{
+    position: fixed;
+
+    top: 65px !important;
+    height: 344px !important;
+    border-radius: 2px 22px 22px 0px;
+
+    p.profileside {
+        display: inline;
+        position: absolute;
+        top: 21px;
+        color: white;
+        font-size: 29px;
+        right: -152px;
+        font-family: 'Roboto Condensed', sans-serif;
+     
+    }
+}
+.dash {
+    margin-top: 97px;
+}
+p.description {
+    background: #e8e5e52e;
+    margin-left: -19px;
+    margin-right: -20px;
+    padding: 11px;
+    height: 141px;
+}
+a.detailstxt {
+    color: white;
+}
+a.detailstxt:hover {
+    color: white;
+}
+button.detailsbtn {
+    background: rgb(168, 5, 5);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: revert;
+}
+button.detailsbtn:hover {
+    background: rgb(19, 18, 18);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: revert;
+}
+.bttn1 {
+    margin-right: 26px;
+}
+.divdash {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 104px;
+}
+hr.hrdash {
+    position: absolute;
+    left: 7.6%;
+}
+
+.sidenav{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 16px;
+    font-weight: 900;
+    color: rgb(19, 18, 18) !important;
+
+}
+.userside{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 4;
+
+}
+
+p.sidenaav {
+    display: inline;
+    padding-left: 8px;
+    font-weight: 100;
+    color: white;
+
+}

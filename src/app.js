@@ -9,6 +9,10 @@ import Show from './components/show/';
 import Login from './components/signin/signin';
 import Logout from './components/signup/signup';
 import Header from './components/header/header';
+import Header2 from './components/header2/header2';
+import Header3 from './components/header3/header3';
+
+
 import Footer from './components/footer/footer';
 import Home from './components/home/home';
 import Classes from './components/classes/classes';
@@ -62,28 +66,34 @@ const App = (props) => {
 
                 <Show condition={loggedIn}>
 
-                    <Header  user={user} logout={logedout} />
 
                     <Route exact path='/'>
+                    <Header  user={user} logout={logedout} />
                         <Home token={tokenSigned} user={user} />
                     </Route>
 
                     <Route exact path='/classes'>
+                    <Header  user={user} logout={logedout} />
+
                         <Classes token={tokenSigned} user={user} />
                     </Route>
 
                     <Route exact path='/dashboard'>
+                    <Header2  user={user} logout={logedout} />
                         <Dashboard  token={tokenSigned} user={user} />
                     </Route>
 
                     <Route exact path='/addcourse'>
+                    <Header  user={user} logout={logedout} />
                         <AddCourse token={tokenSigned} user={user} />
                     </Route>
 
                     <Route exact path='/details/:id'>
+                    <Header3  user={user} logout={logedout} />
                         <Details token={tokenSigned} user={user} />
                     </Route>
                     <Route exact path='/QandA'>
+                    <Header  user={user} logout={logedout} />
                         <Question token={tokenSigned} user={user} />
                     </Route>
 
