@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+    }
+    .bg {
+    // background-image: url("https://img.freepik.com/free-photo/opened-books-table-with-copy-space_23-2148448114.jpg?size=626&ext=jpg&ga=GA1.2.856959889.1595936702");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: black;
+    opacity: .99;
+    }
+
+    .classs {
+        height: 75vh !important;
+
+        // height: inherit !important;
+    }
+
+    .centered {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        font-size: 41px;
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 800;
+        transform: translate(-50%, -50%);
+      }
