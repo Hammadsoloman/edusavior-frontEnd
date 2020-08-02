@@ -1,25 +1,200 @@
+
+@import "~video-react/styles/scss/video-react"; 
+body{
+    height: auto;
+    box-sizing: border-box;
+}
+
 form.signform {
     color: white;
     background: black;
     position: absolute;
-    top: 28%;
+    top: 13%;
     height: auto;
     opacity: 0.8;
+    font-family: 'Roboto Condensed', sans-serif;
     left: 60%;
-    padding: 3%;
+    padding: 2%;
 }
 
 img.signpage {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: black;
-    opacity: .99;
+    opacity: 0.9;
     height: auto;
     width: 100%;
 }
+.total{
+background: black;
+}
 .signlabel {
     font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px !important;
+
     color: white;
     margin-right: 6px;
 }
+
+button.signlsubmit.btn.btn-primary {
+    position: relative;
+    /* bottom: 0px; */
+    right: 54px;
+    font-size: 20px;
+    background: #a70a0a;
+    border: revert;
+    width: 48%;
+    margin-top: 5%;
+
+}
+
+button.signlsubmit.btn.btn-primary:hover {
+    background: #d7d8de;
+    color: black;
+
+}
+button.signlsubmiiit.btn.btn-primary{ 
+    background: #c78b3a;
+    border: revert;
+    width: 48%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+
+}
+button.signlsubmiiit.btn.btn-primary:hover {
+    background: #d7d8de;
+    color: black;
+}
+.vvv{
+    margin-left: 5% !important;
+}
+.vvs{
+    margin-left: 4%;
+}
+.errorsign{
+    color: gold;
+
+}
+.labeel{
+    font-size: 30px;
+    display: grid;
+    justify-content: center;
+}
+.hrsign{
+    width: 80%;
+}
+.divreg{
+    position: absolute;
+    top: 35%;
+    height: auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    left: 10%;
+
+}
+
+.divclock{
+    position: absolute;
+    top: 50%;
+    margin-top: 5%;
+    height: auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    left: 10%;
+    border: 2px solid #d95b57;
+    border-radius: 19px;
+
+}
+a.applya {
+    color: red;
+}
+a.applya:hover {
+    color: white;
+    text-decoration: none;
+}
+button.vanbttn.btn.btn-outline-info:hover {
+    background: #cf2f2c;
+}
+p.get50 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #d3312e;
+}
+p.now {
+    font-size: 52px;
+    color: white;
+    font-weight: 700;
+}
+h2.h2clock {
+    font-size: 61px;
+    color: white;
+    margin-bottom: 0rem;
+    background: #d1302d;
+    border: 2px solid #d95b57;
+    border-radius: 19px;
+
+}
+
+.cont1.container {
+    margin-top: 3%;
+    margin-right: 2px;
+    margin-left: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.signsection{
+    height: 500px;
+    margin-top: 3%;
+    margin-left: 1%;
+
+}
+section.int {
+    margin-top: 3%;
+
+    height: auto;
+    width: 46%;
+    margin-left: 3%;
+}
+h5.intro1 {
+    color: #d21615;
+}
+.pb-400 {
+    padding-bottom: 40px !important;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+        position: relative;
+    padding-left: 24px;
+    padding-bottom: 7px;
+}
+
+.pb-488{
+    margin-right: 9%;
+    margin-bottom: 2%;
+}
+.intro2{
+    margin-bottom: 3%;
+}
+
+.intro4{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    margin-top: 4%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+
+}
+.hrsigggn{
+    width: 20%;
+}
+.video-react{
+    left: 8%;
+}
+
+.introoooo{
+background: #7d7d7d12;
+    padding-bottom: 50px;}
+
+    .account8{
+        text-align: center;
+    }
