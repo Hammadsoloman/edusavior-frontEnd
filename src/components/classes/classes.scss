@@ -1,0 +1,76 @@
+h3.CLASSES {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 29px;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 88px;
+}
+
+p.subj1.card-text {
+    text-align: center;
+    font-size: 19px;
+    color: rgb(175, 5, 5);
+    /* font-weight: 700; */
+    font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bolder;
+}
+button.adtodashbtn {
+    background: rgb(168, 5, 5);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: revert;
+    width: 99%;
+}
+
+
+button.adtodashbtn:hover {
+    background: rgb(19, 18, 18);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: revert;
+}
+p.textclasses1{
+    background: #e8e5e52e;
+    margin-left: -19px;
+    margin-right: -20px;
+    padding: 11px;
+    // height: auto;
+}
+.spanpar{
+    font-size: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;
+}
+.nonBold{
+    white-space: pre;
+}
+
+
+a.navLinkClasses {
+    // position:absolute;
+        color: black;
+        font-weight: 800;
+        font-size: 25px;
+        // border: 2px solid;
+        margin-left: 780px;
+        // margin-top: 200px;
+        margin-bottom: 70px;
+        text-decoration: underline;
+}
+
+a.navLinkClasses:hover{
+    color: #4d4e4e !important;
+    text-decoration: none !important; 
+}
+.classes {
+    // background: #f0f0f0cc;
+    padding: 2.5%;
+    height: auto;
+    margin-bottom: 40px;
+}
+.couresclasses.card-title.h5 {
+    margin-bottom: 28px;
+}
+@media (max-width:1366px){
+    .buttonclasses {
+        margin-left: -460px;
+    }
+}
