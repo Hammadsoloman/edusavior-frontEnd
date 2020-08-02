@@ -12,7 +12,7 @@ import Header from './components/header/header';
 import Header2 from './components/header2/header2';
 import Header3 from './components/header3/header3';
 
-
+import Appointment from './components/appointment/App'
 import Footer from './components/footer/footer';
 import Home from './components/home/home';
 import Classes from './components/classes/classes';
@@ -96,7 +96,11 @@ const App = (props) => {
                     <Header  user={user} logout={logedout} />
                         <Question token={tokenSigned} user={user} />
                     </Route>
-
+                    <Route exact path='/appointments'>
+                    <Header2  user={user} logout={logedout} />
+                        <Appointment token={tokenSigned} user={user} />
+                    </Route>
+                    
                     <Footer />
 
                 </Show>

@@ -58,6 +58,7 @@ const  useLogin  = () => {
     try {
 
       const user = jwt.verify(token, SECRET);
+      console.log('ooooooooooooo' ,user);
       setLoginState(true, token, user);
     } catch (e) {
       setLoginState(false, null, {});

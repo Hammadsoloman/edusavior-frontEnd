@@ -3,6 +3,9 @@ import {useEffect} from 'react';
 import Show from '../show/index'
 import cookie from 'react-cookies';
 import useCoursses from '../../hooks/coursses/coursses';
+
+import cookie from 'react-cookies';
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -14,13 +17,19 @@ import '../../components/classes/classes.scss';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
 
+
 const Classes = (props) => {
-    const [allcourses,getCoursses,addCourses,addToDashboard] = useCoursses(props.token);
+    const [allcourses,getCoursses,addCourses,addToDashboard , getCoursesFromDashboard,dashboardCourses,delteCourse , toggleShow ,deleteCourseFromCourses] = useCoursses(props.token);
+  const user = cookie.load('user');
+     
+
     useEffect(getCoursses, []);
     const user = cookie.load('user');
     return (
     
         <>
+
+
         <SideNav
         onSelect={(selected) => {
           // Add your code here
@@ -86,6 +95,10 @@ const Classes = (props) => {
 
                   </Collapse> */}
                   <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> {item.description} </p>
+<Show condition ={user.username === item.instructor}>
+
+          <button onClick={()=> deleteCourseFromCourses(item._id) }>X</button>
+          </Show>
                   <Button className="adtodashbtn" onClick={()=> addToDashboard(item._id) }>Add To Dashboard </Button>
           <br></br>
 
@@ -100,6 +113,7 @@ const Classes = (props) => {
       <div className="buttonclasses">
       <Show className="showClasses" condition={props.user.role==='instructor'}>
             <NavLink className="navLinkClasses" to="/addcourse">Add Course </NavLink>
+
         </Show>
         </div>
       </>
