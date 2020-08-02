@@ -50,7 +50,8 @@
     "react-scripts": "^3.4.1",
     "react-scroll-up-button": "^1.6.4",
     "scss": "^0.2.4",
-    "superagent": "^5.3.1"
+    "superagent": "^5.3.1",
+    "video-react": "^0.14.1"
   },
   "browserslist": {
     "production": [

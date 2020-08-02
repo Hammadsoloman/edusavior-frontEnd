@@ -56,10 +56,10 @@ const App = (props) => {
                 <Show condition={!loggedIn}>
                     <Redirect to="/" />
                     <Route exact path='/'>
-                        <Login login={login} />
-                        <Show condition={user === 'wrong password' || user === 'user not found'}>
-                        <span>{user}</span>
-                        </Show>
+                        <Login login={login}
+                        user={user}
+                        />
+
 
                     </Route>
                 </Show>
