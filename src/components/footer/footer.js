@@ -1,19 +1,4 @@
-// import React from 'react';
 import './footer.scss';
-// import { Link, NavLink } from 'react-router-dom';
-// const Footer = (props) => {
-//     return (
-//         <>
-//         <header>
-//             <h1>Footer</h1>
-//       </header>
-
-//       </>
-//     );
-//     };
-
-
-// export default Footer;
 
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
@@ -28,14 +13,14 @@ const FooterPagePro = () => {
       <MDBContainer className="text-center text-md-left">
         <MDBRow className="my-4">
           <MDBCol md="4" lg="4">
-            <Image className='imgg' src="https://s3.amazonaws.com/designmantic-logos/logos/2020/Jul/medium-1940-5f1eeefc492ad.png" rounded />
-
+            {/* <Image className='imgg' src="https://s3.amazonaws.com/designmantic-logos/logos/2020/Jul/medium-1940-5f1eeefc492ad.png" rounded /> */}
+            <i  class='fas fa-graduation-cap fa-pull-left fa-3x imgg'></i>
             <h5 className="text-uppercase mb-4 font-weight-bold r">
-              EDUSAVIOUR
+              EDUSAVIOR
             </h5>
 
             <p className="bbbbb">
-              EDUSAVIOUR covers a wide range of academic learning, allowing you to supplement your studies with some additional knowledge.
+              EDUSAVIOR covers a wide range of academic learning, allowing you to supplement your studies with some additional knowledge.
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
@@ -104,7 +89,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a className='edu' href="https://www.MDBootstrap.com"> EDUSAVIOUR.com </a>
+          <a className='edu' href="https://www.MDBootstrap.com"> EDUSAVIOR.com </a>
         </MDBContainer>
       </div>
     </MDBFooter>

@@ -12,7 +12,7 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
 
-
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 import Carousel from 'react-bootstrap/Carousel';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Image from 'react-bootstrap/Image';
@@ -44,7 +44,9 @@ const Home = (props) => {
         <img
           className="d-blllo"
 
-          src="https://images.pexels.com/photos/4145151/pexels-photo-4145151.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/about/about.jpg"
+          // src="https://images.pexels.com/photos/1110355/pexels-photo-1110355.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+
           alt="Third slide"
         />
         <div className="visions">
@@ -104,29 +106,42 @@ const Home = (props) => {
           OUR POPULAR COURSES
       </h3>
         <p className="wlasac">
-          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
         <hr></hr>
         <Container>
 
           {allcourses.map(item => {
             return (
-              <Card style={{ width: '18rem' }} key={item._id}>
+              <Card className="caaard" style={{ width: '18rem' }} key={item._id}>
                 <Card.Img variant="top" src={item.img_url} />
                 <Card.Body>
                   <Card.Text className="subj">
                     {item.subject}
                   </Card.Text>
+                  {/* <hr className="line"></hr> */}
                   <Card.Title>course: {item.course_name}
                   </Card.Title>
+                  <div className="uul">
+
+                  <i class='f fas fa-star fa-spin fa-3x'></i>
+                  <i class='f fas fa-star fa-spin fa-3x'></i>
+                  <i class='f fas fa-star fa-spin fa-3x'></i>
+                  <i class='f fas fa-star fa-spin fa-3x'></i>
+                  <i class='f fas fa-star fa-spin fa-3x'></i>
+                  <i class='k'>|</i>
+                  <i class='k'>25 Reviews</i>
+                  </div>
+
+
                   <Card.Text>
                     Course duration: {item.literature_time}
                   </Card.Text>
                   <Card.Text>
                     instructor: {item.instructor}
                   </Card.Text>
-
-                  <Button
-                    className="divbttn"
+              
+                    <Button
+                    className="classbttn"
                     onClick={() => toggleShow(item._id)}
                     aria-controls="example-collapse-text"
                     aria-expanded={item.show}
@@ -168,7 +183,7 @@ const Home = (props) => {
               <img
                 className="d-bloo"
 
-                src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                src="https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt="Third slide"
               />
             </MDBCol>
@@ -180,11 +195,11 @@ const Home = (props) => {
               <div class="row">
                 <div class="col">
                   <h2 className="num">60</h2>
-                  <h4 className="num4">Teachers</h4>
+                  <h4 className="num4">TEACHERS</h4>
                 </div>
                 <div class="col">
                   <h2 className="num">40</h2>
-                  <h4 className="num4">Courses</h4>    </div>
+                  <h4 className="num4">COURSES</h4>    </div>
               </div>
 
             </div>
@@ -192,7 +207,7 @@ const Home = (props) => {
               <div class="row">
                 <div class="col">
                   <h2 className="num">600</h2>
-                  <h4 className="num4">Students</h4>    </div>
+                  <h4 className="num4">STUDENTS</h4>    </div>
                 <div class="col">
                   <h2 className="num">1806</h2>
                   <h4 className="num4">SATISFIED CLIENT</h4>    </div>
@@ -209,7 +224,7 @@ const Home = (props) => {
       </MDBFooter>
 
       <h3 className="COURSES">
-        FEEDBACK
+      WHAT PEOPLE SAYS
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
@@ -251,6 +266,9 @@ const Home = (props) => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <div>
+        <ScrollUpButton />
+      </div>
     </>
   );
 };
