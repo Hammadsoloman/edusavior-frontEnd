@@ -4,6 +4,8 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, M
 import './signin.scss';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import { Button, Form, Col, Row } from "react-bootstrap";
+import Show from "../show/index"
+
 
 const Login = (props) => {
 
@@ -65,8 +67,11 @@ const Login = (props) => {
             <Col className="signpass" sm={10}>
               <Form.Control type="password" placeholder="Password"  name="password" onChange={handleChange} />
             </Col>
-          </Form.Group>
 
+          </Form.Group>
+          <Show condition={props.user === 'wrong password' || props.user === 'user not found'}>
+                        <span>{props.user}</span>
+                        </Show>
           
           <Form.Group as={Row}>
             <Col className="signlsubmit" sm={{ span: 10, offset: 2 }}>
