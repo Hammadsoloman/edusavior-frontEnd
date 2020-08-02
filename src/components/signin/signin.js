@@ -69,8 +69,8 @@ const Login = (props) => {
           alt="First slide"
         />
         <div className="divreg">
-          <p className="get50">GET 50+ COURSES FREE ACCESS</p>
-          <p className="now">REGISTERS NOW</p>
+          <p className="animate__animated animate__bounceInDown get50">GET 50+ COURSES FREE ACCESS</p>
+          <p className="animate__animated animate__bounceInUp now">REGISTERS NOW</p>
           <p className="animate__animated animate__fadeIn noow animate__infinite  ">Welcome to EDUSAVIOR</p>
         </div>
         {/* <div className="divclock">
