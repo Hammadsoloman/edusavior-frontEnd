@@ -1,11 +1,18 @@
+.backcolor{
+    margin-top: 25px;
+    background-color: rgb(230, 227, 227);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
 .addcourse{
     display: flex;
     flex-wrap: wrap;
     width: 45%;
     height: 100%;
-    background-color: rgb(230, 227, 227);  
+    background-color: rgb(255, 255, 255);  
     text-align: left;
-    text-shadow: 2px 2px 5px rgba(143, 143, 143, 0.651);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.651);
     padding-top: 60px;
     padding-bottom: 20px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -19,6 +26,7 @@
     box-shadow: 0 0 0 0.2rem rgba(104, 106, 107, 0.5);
     word-spacing: 5px;
     letter-spacing: 2px;
+    
 }
 input.inputaddcourse.form-control[type=text]:focus { 
     border: 3px solid rgba(255, 0, 0, 0.473);
@@ -117,7 +125,9 @@ input.inputaddcourse.form-control {
 // }
 
 button.addcoursebtn {
-    background: #f3f3f3;
+    background: rgb(243, 10, 10);
+    border-color: red;
+    background: #a5a5a5;
     border-color: #f3f3f3;
     width: 50%;
     color: black;
