@@ -130,11 +130,12 @@ const Login = (props) => {
 
           <h5 className="intro1" >About Us</h5>
           <h2 className="intro2">WELCOME TO EDUSAVIOR</h2>
-          <p className="intro3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eius to mod tempor incididunt ut labore et dolore magna aliqua. Ut enims ad minim veniam. Aenean massa. Cum sociis natoque penatibus et magnis dis partu rient to montes.Aene an massa. Cum sociis natoque penatibus. Ut enims ad minim veniam. Aenean massa. Aenean massa cum sociis natoque penatibus sed do eiusmod tempor.</p>
+          <p className="intro3">            edusavior will be your favorite website that provide you with some courses that you might need in your life to have a good educational background with a group of the best instructors in that field
+</p>
           <ul className="pb-400">
             <li className="pb-488">Trending Courses</li>
-            <li className="pb-488">Certified Teaches</li>
-            <li className="pb-488">Books & Libraries</li>
+            <li className="pb-488">Appointment</li>
+            <li className="pb-488">Realtime Chat</li>
             <li className="pb-488">Online Course</li>
             <li className="pb-488">Students Portal</li>
             <li className="pb-488">Lab Facilities</li>

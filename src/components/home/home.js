@@ -166,7 +166,7 @@ const Home = (props) => {
         ACHIVEMENT
       </h3>
       <p className="wlasac">
-        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+      We have obtained many partnerships with educational institutions, in addition to the achievements below       </p>
       <hr></hr>
       <MDBFooter color="mdb-color" className="font-smalll">
 
