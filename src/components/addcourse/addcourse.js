@@ -1,4 +1,5 @@
 import React from 'react';
+import {storage} from  '../../firebase';
 
 import { useState, useEffect } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
@@ -13,26 +14,64 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import '../addcourse/addcourse.scss'
+import Show from '../show';
 const Addcourse = (props) => {
   const user = cookie.load('user');
-
+  const [image ,setImage] = useState(null);
+  const [url, setUrl] = useState("");
+  const [loading , setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [allcourses, getCoursses, addCourses] = useCoursses(props.token);
-
   const [oneClass, setClass] = useState({});
 
   const handleChange = (e) => {
     setClass({ ...oneClass, [e.target.name]: e.target.value });
   };
-
+const handleFile = (e) =>{
+  if (e.target.files[0]) {
+    setImage(e.target.files[0]);
+  }
+}
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setClass({...oneClass, instructor_img})
     let course = oneClass;
     course.instructor = user.username;
-    course.instructor_img = user.profile_img || 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg';
-    console.log('yyyyyyyyyyyyy', course);
-    addCourses(course);
-    props.history.push('/classes')
+    course.instructor_img = user.profile_img
+
+    if(image){
+      setLoading(true)
+      const uploadTask = storage.ref(`images/${image.name}`).put(image);
+      uploadTask.on(
+        "state_changed",
+        snapshot => {
+          const progress = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+          setProgress(progress);
+        },
+        error => {
+          console.log(error);
+        },
+        () => {
+          storage
+            .ref("images")
+            .child(image.name)
+            .getDownloadURL()
+            .then(url => {
+              setLoading(false)
+              setUrl(url);
+              course.img_url = url
+              addCourses(course);
+              props.history.push('/classes')
+            })
+        }
+      );
+    }else{
+      course.img_url = 'https://www.onehappydog.com/wp-content/uploads/online-course-img.png'
+      addCourses(course);
+      props.history.push('/classes')
+    }
+   
   };
 
   return (
@@ -43,9 +82,6 @@ const Addcourse = (props) => {
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label className="label1">ADD COURSE</Form.Label><br></br>
             </Form.Group>
-            {/* <Form.Group controlId="exampleForm.ControlInput1">
-      <Form.Text>{user.username} </Form.Text>
-  </Form.Group> */}
             <Form.Group className="label2 label6">
               <Form.Text>Enter all the following:</Form.Text>
             </Form.Group>
@@ -69,19 +105,13 @@ const Addcourse = (props) => {
               <Form.Label>Duration Time</Form.Label>
               <Form.Control className="inputaddcourse" type="time" name="literature_time" onChange={handleChange} />
             </Form.Group>
-            {/* ------------Image Address------------- */}
-            <Form.Group>
-              <InputGroup className="label4 label5">
-                <InputGroup.Prepend>
-                  <InputGroup.Text>Image Address</InputGroup.Text>
-                </InputGroup.Prepend>
-                <Form.Control className="inputaddcourse" id="inlineFormInputGroup" type="text" name="img_url" placeholder="poster for the course" onChange={handleChange} />
-              </InputGroup>
-            </Form.Group>
             {/* -----------add image from device---------- */}
             <Form.Group>
-            <Form.File className="label7" label="add image from device" />
+            <Form.File className="label7" label="add image from device" onChange={handleFile} />
             </Form.Group>
+            <Show condition={loading}>
+            <img src='https://thumbs.gfycat.com/SimilarPlumpBarasingha-max-1mb.gif' />
+            </Show>
             {/* --------description----------- */}
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Description</Form.Label>
@@ -92,8 +122,6 @@ const Addcourse = (props) => {
               <Form.Label>Detalis</Form.Label>
               <Form.Control className="inputaddcourse" as="textarea" rows="3" type="text" name="details" placeholder="details ..." onChange={handleChange} />
             </Form.Group>
-
-
             {/* --------button--------- */}
             <Button className="addcoursebtn" type="submit">add to classes</Button>
           </Form>
