@@ -50,79 +50,7 @@ input.inputaddcourse.form-control {
     width: 300px;
 
 }
-//   input[type=text], select, textarea {
-//     width: 100%;
-//     padding: 12px;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-//     resize: vertical;
-//   }
-// p.subj1.card-text {
-//     text-align: center;
-//     font-size: 20px;
-//     color: red;
-//     /* font-weight: 700; */
-//     font-family: 'Roboto Condensed', sans-serif;
-//         font-weight: bolder;
-//         text-transform: uppercase;
-// }
-// button.adtodashbtn {
-//     background: #f3f3f3;
-//     border-color: #f3f3f3;
-//     width: 99%;
-//     color: black;
-//     height: 50px;
-//     font-weight: 500;
-//     font-size: 16px;
-//     border-radius: 2px;
-// }
-// button.adtodashbtn:hover {
-//     background: rgb(243, 10, 10);
-//     border-color: red;
-//     width: 99%;
-//     border-radius: 2px;
-// }
-// button.adtodashbtn:focus {
-//     // color: #fff;
-//     background-color: red;
-//     border-color: red;
-//     box-shadow: 0 0 0 0.2rem rgba(104, 106, 107, 0.5);
-// }
-// p.textclasses.card-text {
-//     font-size: 15px;
-// }
-// p.textclasses {
-//     font-size: 15px;
-// }
-// .spanpar{
-//     font-size: 20px ;
-//     // font-weight: bold;
-//     font-weight: 800;
-// }
-// .nonBold{
-//     white-space: pre;
-// }
 
-// a.navLinkClasses {
-//         color: black;
-//         font-weight: 800;
-//         font-size: 25px;
-//         // border: 2px solid;
-//         margin-left: 720px;
-//         // margin-top: 200px;
-//         margin-bottom: 50px;
-
-
-// }
-// a.navLinkClasses:hover{
-//     color: #4d4e4e !important;
-//     text-decoration: none !important; 
-// }
-// .classes {
-//     background: #f0f0f0cc;
-//     padding: 2.5%;
-//     margin-bottom: 30px;
-// }
 
 button.addcoursebtn {
     background: rgb(243, 10, 10);
@@ -150,4 +78,16 @@ button.addcoursebtn:focus {
     background-color: red;
     border-color: red;
     box-shadow: 0 0 0 0.2rem rgba(104, 106, 107, 0.5);
+}
+
+.label7{
+    border:none;
+}
+input.form-control-file {
+    font-size: 20px;
+    border:1px solid rgba(190, 190, 190, 0.5);
+    color: rgba(194, 194, 194, 0.5); ;
+}
+input.form-control-file[type=text]:focus {
+    border: 2px solid rgba(255, 0, 0, 0.473);
 }

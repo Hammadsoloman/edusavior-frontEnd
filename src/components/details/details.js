@@ -78,24 +78,6 @@ const Details = ({ match, token }) => {
             {courseDetial.map(item => {
                 return (
 
-                    // <section>
-
-                    //     <img src={item.instructor_img} />
-                    //     <br />
-                    //     <span>instructor Name: {item.instructor}</span>
-                    //     <br />
-                    //     <img src={item.img_url} />
-                    //     <span>Course Name: {item.course_name}</span>
-                    //     <br />
-                    //     <span>subject: {item.subject}</span>
-                    //     <br />
-                    //     <p>description: {item.description}</p>
-                    //     <p>Duration: {item.literature_time}</p>
-                    //     <p>details: {item.details}</p>
-                    //     <p>start Date: {item.start_date}</p>
-                    //     <p>room_id: {item.room_id}</p>
-
-                    // </section>
                     <div className="horizental">
                         <Card className="deatailscard" style={{ width: '18rem' }}>
                             <Card.Img className="deatailsimg" variant="top" src={item.img_url} />
@@ -139,14 +121,12 @@ const Details = ({ match, token }) => {
                        
                         <Form className="meetingform">
                             <Form.Row >
-                               
                                     <Form.Control placeholder="Room-ID" value={room} onChange={(e) => setRoom(e.target.value)} />
-                               
-                                    <Form.Control placeholder="Password (optional)" value={password} onChange={(e) => setPassword(e.target.value)}  />
+                                    <Form.Control hidden placeholder="Password (optional)" value={password} onChange={(e) => setPassword(e.target.value)}  />
                                 <Button className="meetingbttn" onClick={handleClick} type="submit">Start / Join</Button>
                             </Form.Row>
                         </Form>
-                       
+
                     )}
                 </div>
             <div>
