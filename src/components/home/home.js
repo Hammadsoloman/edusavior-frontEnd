@@ -19,11 +19,6 @@ import Image from 'react-bootstrap/Image';
 
 
 
-
-
-
-
-
 const Home = (props) => {
   const token = cookie.load('auth');
   const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses, delteCourse, toggleShow] = useCoursses(token);
