@@ -20,6 +20,7 @@ import Dashboard from './components/dashboard/dashboard';
 import AddCourse from './components/addcourse/addcourse'
 import Details from './components/details/details'
 import Question from './components/questions/questions';
+import Aboutus from './components/aboutus/aboutus';
 
 //====================================================================\\
 
@@ -95,6 +96,10 @@ const App = (props) => {
                     <Route exact path='/QandA'>
                     <Header  user={user} logout={logedout} />
                         <Question token={tokenSigned} user={user} />
+                    </Route>
+                    <Route exact path='/about'>
+                    <Header  user={user} logout={logedout} />
+                        <Aboutus token={tokenSigned} user={user} />
                     </Route>
                     <Route exact path='/appointments'>
                     <Header2  user={user} logout={logedout} />
