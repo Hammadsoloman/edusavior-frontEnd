@@ -77,7 +77,6 @@ const AddAppointments = (props) => {
             <div >
               <input
                 type="date"
-
                 name="date"
                 id="aptDate"
 
@@ -95,7 +94,6 @@ const AddAppointments = (props) => {
                 type="time"
                 name="aptTime"
                 id="aptTime"
-
                 onChange={handleChange}
               />
             </div>

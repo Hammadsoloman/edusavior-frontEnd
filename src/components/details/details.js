@@ -9,7 +9,7 @@ import Card from 'react-bootstrap/Card';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Form, Col } from 'react-bootstrap';
 import { MDBInput } from "mdbreact";
-
+import Chat from '../chat/chat';
 
 
 import Button from 'react-bootstrap/Button';
@@ -25,13 +25,13 @@ const Details = ({ match, token }) => {
     const [call, setCall] = useState(false)
     const [password, setPassword] = useState('')
     const user = cookie.load('user');
-    const handleClick = event => {
-        event.preventDefault()
-        if (room && user.username) setCall(true)
-    }
     const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses] = useCoursses(token);
     useEffect(getCoursesFromDashboard, [])
     let courseDetial = dashboardCourses.filter(i => i._id === match.params.id);
+    const handleClick = event => {
+        event.preventDefault()
+        if (courseDetial[0] && user.username) setCall(true)
+    }
 
     return (
         <>
@@ -78,24 +78,6 @@ const Details = ({ match, token }) => {
             {courseDetial.map(item => {
                 return (
 
-                    // <section>
-
-                    //     <img src={item.instructor_img} />
-                    //     <br />
-                    //     <span>instructor Name: {item.instructor}</span>
-                    //     <br />
-                    //     <img src={item.img_url} />
-                    //     <span>Course Name: {item.course_name}</span>
-                    //     <br />
-                    //     <span>subject: {item.subject}</span>
-                    //     <br />
-                    //     <p>description: {item.description}</p>
-                    //     <p>Duration: {item.literature_time}</p>
-                    //     <p>details: {item.details}</p>
-                    //     <p>start Date: {item.start_date}</p>
-                    //     <p>room_id: {item.room_id}</p>
-
-                    // </section>
                     <div className="horizental">
                         <Card className="deatailscard" style={{ width: '18rem' }}>
                             <Card.Img className="deatailsimg" variant="top" src={item.img_url} />
@@ -124,34 +106,34 @@ const Details = ({ match, token }) => {
             })
 
             }
-            
-                <h2 className="hmeeting">Edusavior Meeting</h2>
-                <hr className="hrdash"></hr>
-                <div className="div2meeet">
 
-                {call ? (<Jutsu
-                    roomName={room}
+            <h2 className="hmeeting">Edusavior Meeting</h2>
+            <hr className="hrdash"></hr>
+            <div className="div2meeet">
+
+                {call && courseDetial[0] ? (<Jutsu
+                    roomName={courseDetial[0].course_name}
                     password={password}
                     displayName={user.username}
                     onMeetingEnd={() => console.log('Meeting has ended')}
                     loadingComponent={<p>ʕ •ᴥ•ʔ edusavior is loading ...</p>} />)
                     : (
-                       
+
                         <Form className="meetingform">
                             <Form.Row >
-                               
-                                    <Form.Control placeholder="Room-ID" value={room} onChange={(e) => setRoom(e.target.value)} />
-                               
-                                    <Form.Control placeholder="Password (optional)" value={password} onChange={(e) => setPassword(e.target.value)}  />
+                                {/* <Form.Control placeholder="Room-ID" value={room} onChange={(e) => setRoom(e.target.value)} /> */}
+                                <Form.Control hidden placeholder="Password (optional)" value={password} onChange={(e) => setPassword(e.target.value)} />
                                 <Button className="meetingbttn" onClick={handleClick} type="submit">Start / Join</Button>
                             </Form.Row>
                         </Form>
-                       
+
                     )}
-                </div>
+            </div>
             <div>
                 <ScrollUpButton />
             </div>
+            <Chat user={user} courseDetial={courseDetial} />
+            {/* <a href="https://video-chat.dgurgel.now.sh/">video chat</a> */}
         </>
     );
 };
