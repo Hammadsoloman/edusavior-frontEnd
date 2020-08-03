@@ -123,7 +123,7 @@ const handleFile = (e) =>{
               <Form.Control className="inputaddcourse" as="textarea" rows="3" type="text" name="details" placeholder="details ..." onChange={handleChange} />
             </Form.Group>
             {/* --------button--------- */}
-            <Button className="addcoursebtn" type="submit">add to classes</Button>
+            <Button className="addcoursebtn" type="submit">Add Course</Button>
           </Form>
         </div>
       </div>
