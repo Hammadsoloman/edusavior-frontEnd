@@ -33,7 +33,7 @@ const Home = (props) => {
         ABOUT US
       </h3>
       <p className="wlasac">
-        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+      We work hard to be the pioneer in virtual learning, and that by using video stream and real time chat in our courses         </p>
       <hr></hr>
       <div className="vision">
         <img
@@ -49,7 +49,7 @@ const Home = (props) => {
           <div>
             <h5 className="h5"> WELCOME TO EDUSAVIOUR</h5>
             <p className="wlc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            edusavior will be your favorite website that provide you with some courses that you might need in your life to have a good educational background with a group of the best instructors in that field
            </p>
           </div>
           <Button
@@ -62,7 +62,7 @@ const Home = (props) => {
       </Button>
           <Collapse in={open}>
             <div id="example-collapse-text">
-              Our vision is to make the students practice at their place, first filling in gaps in their understanding and then accelerating their learning.
+              First website in the Arab word that give courses in alive stream.
         </div>
           </Collapse>
           <Button
@@ -101,7 +101,7 @@ const Home = (props) => {
           OUR POPULAR COURSES
       </h3>
         <p className="wlasac">
-          Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
+        These are the most viewed courses on our website</p>
         <hr></hr>
         <Container>
 
