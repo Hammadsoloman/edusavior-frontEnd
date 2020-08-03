@@ -33,7 +33,8 @@ const Header = (props) => {
     useEffect(getQuestions, [])
     return (
         <>
-            <h1>questions</h1>
+             <div className="divdash"> Question & Answer</div>
+        <hr className="hrdash"></hr>
             <form onSubmit={handleSubmit} >
 
 

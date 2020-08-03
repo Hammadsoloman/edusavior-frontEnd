@@ -11,6 +11,8 @@ import Logout from './components/signup/signup';
 import Header from './components/header/header';
 import Header2 from './components/header2/header2';
 import Header3 from './components/header3/header3';
+import Header4 from './components/header4/header4';
+
 
 import Appointment from './components/appointment/App'
 import Footer from './components/footer/footer';
@@ -93,7 +95,7 @@ const App = (props) => {
                         <Details token={tokenSigned} user={user} />
                     </Route>
                     <Route exact path='/QandA'>
-                    <Header  user={user} logout={logedout} />
+                    <Header4  user={user} logout={logedout} />
                         <Question token={tokenSigned} user={user} />
                     </Route>
                     <Route exact path='/appointments'>
