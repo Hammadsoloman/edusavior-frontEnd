@@ -143,7 +143,7 @@ const Aboutus = (props) => {
                                     <li><a href="https://www.facebook.com/amal.m.almomani"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="https://twitter.com/Amalalmomani"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/in/amal-almomani-32a743178/"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://github.com/orgs/edusavior/people/AmalMAlmomani"><i class="fab fa-github"></i></a></li> 
+                                        <li><a href="https://github.com/AmalMAlmomani"><i class="fab fa-github"></i></a></li> 
                                     </ul>
                                 </div>
                             </figure>
@@ -164,7 +164,7 @@ const Aboutus = (props) => {
                                     <li><a href="https://web.facebook.com/osama.mousa.92754/"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="https://twitter.com/OsamaMo71089566?fbclid=IwAR2BiQ25daZYrSDwcfIYcD2uVITZbsy_orCA-JgibS-40b0i1wTj61mdZMg"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/in/osamamousa/"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                        <li><a href="https://github.com/osamamousa204"><i class="fab fa-github"></i></a></li>
                                     </ul>
                                 </div>
                             </figure>
@@ -185,7 +185,7 @@ const Aboutus = (props) => {
                                     <li><a href="https://www.facebook.com/reham.omar.562"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="https://www.linkedin.com/in/reham-al-sobh-6a61931a2/"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                        <li><a href="https://github.com/Reham-Omar"><i class="fab fa-github"></i></a></li>
                                     </ul>
                                 </div>
                             </figure>
@@ -207,7 +207,7 @@ const Aboutus = (props) => {
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="www.linkedin.com/in/hammad95"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                        <li><a href="https://github.com/Hammadsoloman"><i class="fab fa-github"></i></a></li>
                                     </ul>
                                 </div>
                             </figure>
