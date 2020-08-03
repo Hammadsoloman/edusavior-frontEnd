@@ -69,7 +69,7 @@ const Classes = (props) => {
         <h3 className="CLASSES">
           OUR CLASSES
       </h3>
-      <hr className="hrdash"></hr>
+      <hr className="hrrrdash"></hr>
         <Container className="dash">
 
           {allcourses.map(item => {

@@ -39,7 +39,7 @@ const Home = (props) => {
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
-      <hr></hr>
+      <hr className="hrhoome"></hr>
       <div className="vision">
         <img
           className="d-blllo"
@@ -107,7 +107,7 @@ const Home = (props) => {
       </h3>
         <p className="wlasac">
           Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
-        <hr></hr>
+        <hr className="hrhoome"></hr>
         <Container>
 
           {allcourses.map(item => {
@@ -172,7 +172,7 @@ const Home = (props) => {
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
-      <hr></hr>
+      <hr className="hrhoome"></hr>
       <MDBFooter color="mdb-color" className="font-smalll">
 
         <MDBContainer className="text-center text-md-left yy">
@@ -228,7 +228,7 @@ const Home = (props) => {
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
-      <hr></hr>
+      <hr className="hrhoome"></hr>
       <Carousel className="carousel-innner">
         <Carousel.Item>
           <img
