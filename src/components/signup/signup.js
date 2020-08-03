@@ -5,7 +5,7 @@ import { Button, Form, Col, Row } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './signup.scss';
- 
+ import Show from '../show/index'
 import { Link, NavLink,withRouter } from 'react-router-dom';
 import useSignup from '../../hooks/auth/signup';
 
@@ -14,6 +14,7 @@ const Signup = (props) => {
  const [user , setuser] =  useState({});
  const [image ,setImage] = useState(null);
  const [url, setUrl] = useState("");
+ const [loading , setLoading] = useState(false);
  const [progress, setProgress] = useState(0);
  const [signup] = useSignup();
  const handleChange = (e) => {
@@ -21,6 +22,7 @@ const Signup = (props) => {
   };
   const handleFile = (e) =>{
     if (e.target.files[0]) {
+      console.log('kkkkkkkkkkkkk' ,e.target.files[0] );
       setImage(e.target.files[0]);
     }
   }
@@ -28,6 +30,7 @@ const Signup = (props) => {
  const handleSubmit = (e) => {
     e.preventDefault();
     if(image){
+      setLoading(true)
       const uploadTask = storage.ref(`images/${image.name}`).put(image);
       uploadTask.on(
         "state_changed",
@@ -46,9 +49,11 @@ const Signup = (props) => {
             .child(image.name)
             .getDownloadURL()
             .then(url => {
+              setLoading(false)
               setUrl(url);
               let userInfo = user;
               userInfo.profile_img = url;
+              console.log(',,,,,,,,,,,,,,,,',userInfo );
               signup(userInfo);
               props.history.push('/')
             })
@@ -151,7 +156,7 @@ const Signup = (props) => {
               Password
             </Form.Label>
             <Col className="signpass" sm={10}>
-              <Form.Control type="password" placeholder="Password" name="password" minlength="5" onChange={handleChange} />
+              <Form.Control type="password" placeholder="Password" name="password" minlength="6" onChange={handleChange} />
             </Col>
 
           </Form.Group>
@@ -169,9 +174,11 @@ const Signup = (props) => {
               Image
             </Form.Label>
             <Col className="signpass" sm={10}>
-              <Form.Control type="file" placeholder="Email" name="profile_img" minlength="9" onChange={handleChange} />
+              <Form.Control type="file" placeholder="profile_img" name="profile_img" minlength="9" onChange={handleFile} />
             </Col>
-
+            <Show condition={loading} >
+              <img src='https://thumbs.gfycat.com/SimilarPlumpBarasingha-max-1mb.gif' />
+            </Show>
           </Form.Group>
           <select required name="role" onChange={handleChange}>
             <option selected disabled>Choose your role</option>
