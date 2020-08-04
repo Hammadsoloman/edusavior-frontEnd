@@ -6,11 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Main extends React.Component {
   render() {
     return (
+      
       <React.StrictMode>
-
-        <App />
-       
+        <App />   
       </React.StrictMode>
+      
     );
   }
 }
