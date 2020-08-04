@@ -25,6 +25,9 @@ const Classes = (props) => {
      
 
     useEffect(getCoursses, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
     // const user = cookie.load('user');
     return (
     

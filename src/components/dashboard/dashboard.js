@@ -23,6 +23,10 @@ const Dashboard = (props) => {
   const user = cookie.load('user');
 
   useEffect(getCoursesFromDashboard, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
 
