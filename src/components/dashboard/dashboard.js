@@ -80,7 +80,7 @@ const Dashboard = (props) => {
                 <Card.Title>course: {item.course_name}
                 </Card.Title>
                 </section>
-                <div className="uul">
+                {/* <div className="uul">
 
                   <i class='f fas fa-star fa-spin fa-3x'></i>
                   <i class='f fas fa-star fa-spin fa-3x'></i>
@@ -89,7 +89,7 @@ const Dashboard = (props) => {
                   <i class='f fas fa-star fa-spin fa-3x'></i>
                   <i class='k'>|</i>
                   <i class='k'>25 Reviews</i>
-                </div>
+                </div> */}
 
                 <Card.Text className="description">
                   Description : <br></br>

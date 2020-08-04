@@ -107,14 +107,14 @@ const Login = (props) => {
               <Button className="signlsubmit" type="submit">Sign in</Button>
             </Col>
           </Form.Group>
-          <p className="account8">OR </p>
+          {/* <p className="account8">OR </p>
 
           <p className="account8">Sign In Using </p>
          
             <Col  className="vvv" sm={{ span: 10, offset: 2 }}>
               <Button className="signlsubmiiit" type="submit">Google</Button>
               <Button className="signlsubmiiit vvs" type="submit">Linked In</Button>
-            </Col>
+            </Col> */}
            
           <span className="account">don't have an account! <Link to="/signup">signup</Link></span>
         </Form>
