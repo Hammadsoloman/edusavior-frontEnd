@@ -12,7 +12,7 @@ import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Image from 'react-bootstrap/Image';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink  ,withRouter} from 'react-router-dom';
 import '../../components/classes/classes.scss';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
@@ -25,10 +25,15 @@ const Classes = (props) => {
      
 
     useEffect(getCoursses, []);
+    
     useEffect(() => {
       window.scrollTo(0, 0);
     }, []);
-    // const user = cookie.load('user');
+
+    const handleAddCourse = (id) =>{
+      addToDashboard(id);
+      props.history.push('/dashboard');
+    }
     return (
     
         <>
@@ -77,7 +82,7 @@ const Classes = (props) => {
 
                   </Collapse> */}
                   <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> {item.description} </p>
-                           <Button className="adtodashbtn" onClick={()=> addToDashboard(item._id) }>Enroll Now</Button>
+                           <Button className="adtodashbtn" onClick={()=> handleAddCourse(item._id) }>Enroll Now</Button>
           <br></br>
 
                   
@@ -97,4 +102,4 @@ const Classes = (props) => {
     };
     
     
-export default Classes;
+export default withRouter(Classes);

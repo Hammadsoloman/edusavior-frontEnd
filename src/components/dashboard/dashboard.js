@@ -12,14 +12,13 @@ import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
-// Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
-// import { Redirect } from "react-router-dom";
 
 const Dashboard = (props) => {
   const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses, delteCourse, toggleShow] = useCoursses(props.token);
-  // console.log('props.dashboardCourses',props.userInfo);
+
+
   const user = cookie.load('user');
 
   useEffect(getCoursesFromDashboard, []);
