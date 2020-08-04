@@ -1,5 +1,5 @@
 import React from 'react';
-import './header2.scss';
+// import './header4.scss';
 import { Link, NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -10,7 +10,7 @@ import cookie from 'react-cookies';
 
 import Button from 'react-bootstrap/Button';
 
-const Header2 = (props) => {
+const Header5 = (props) => {
   const user = cookie.load('user');
   
   return (
@@ -44,12 +44,12 @@ const Header2 = (props) => {
             src="https://img.freepik.com/free-photo/opened-books-table-with-copy-space_23-2148448114.jpg?size=626&ext=jpg&ga=GA1.2.856959889.1595936702"
             alt="First slide"
           />
-           <div class="centered"> MY DASHBOARD</div>
+           <div class="centered"> ABOUT US</div>
       </div>
       
     </header>
   );
 };
 
-export default Header2;
+export default Header5;
 

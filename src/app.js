@@ -12,6 +12,8 @@ import Header from './components/header/header';
 import Header2 from './components/header2/header2';
 import Header3 from './components/header3/header3';
 import Header4 from './components/header4/header4';
+import Header5 from './components/header5/header5';
+
 
 
 import Appointment from './components/appointment/App'
@@ -100,13 +102,13 @@ const App = (props) => {
                         <Question token={tokenSigned} user={user} />
                     </Route>
                     <Route exact path='/about'>
-                    <Header  user={user} logout={logedout} />
+                    <Header5  user={user} logout={logedout} />
                         <Aboutus token={tokenSigned} user={user} />
                     </Route>
-                    <Route exact path='/appointments'>
+                    {/* <Route exact path='/appointments'>
                     <Header2  user={user} logout={logedout} />
                         <Appointment token={tokenSigned} user={user} />
-                    </Route>
+                    </Route> */}
                     
                     <Footer />
 

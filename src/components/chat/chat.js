@@ -91,7 +91,7 @@ export default (props) => {
   ) : (
     <div style={{ textAlign: 'center', margin: '30vh auto', width: '70%' }}>
       <form onSubmit={event => handleSubmit(event)}>
-        <button type="submit">join chat</button>
+        <button className="chatbttn" type="submit">join chat</button>
       </form>
     </div>
   );

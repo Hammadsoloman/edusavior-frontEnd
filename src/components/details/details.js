@@ -79,11 +79,20 @@ const Details = ({ match, token }) => {
                 return (
 
                     <div className="horizental">
-                        <Card className="deatailscard" style={{ width: '18rem' }}>
+                            <div className="imgdeataildev">
                             <Card.Img className="deatailsimg" variant="top" src={item.img_url} />
+
+                            </div>
+                        <Card className="deatailscard" style={{ width: '18rem' }}>
                             <Card.Body className="cardbody">
-                                <Card.Title className="deatailstitle"> {item.subject}</Card.Title>
-                                <Card.Title className="deatailstitle">{item.course_name}</Card.Title>
+                                <Card.Title className="deatailstitle"><span className="spaaaansub">
+                                <span className="kkkkkk">Subject : </span>   {item.subject}
+                                    </span></Card.Title>
+                                    <hr className="qc"/>
+                                <Card.Title className="deatailstitle"><span className="spaaaansub">
+                                <span  className="kkkkkk">Course : </span> {item.course_name}
+                                    </span></Card.Title>
+                                    <hr className="qc"/>
 
                                 <Card.Text className="deatailstext">
                                     <p className="phor"> Details </p>
@@ -92,10 +101,11 @@ const Details = ({ match, token }) => {
                             </Card.Body>
                             <ListGroup className="list-group-flush">
                                 <ListGroupItem>
-                                    <img className="ins" src={item.instructor_img} />{item.instructor}</ListGroupItem>
+                                    <img className="ins" src={item.instructor_img} />
+                                    <span className="insructorspan">{item.instructor}</span></ListGroupItem>
                                 <ListGroupItem>Literature_Time : {item.literature_time}</ListGroupItem>
                                 <ListGroupItem>Start Date : {item.start_date}</ListGroupItem>
-                                <ListGroupItem>Room-ID : {item.room_id}</ListGroupItem>
+                               
 
                             </ListGroup>
 
@@ -123,7 +133,7 @@ const Details = ({ match, token }) => {
                             <Form.Row >
                                 {/* <Form.Control placeholder="Room-ID" value={room} onChange={(e) => setRoom(e.target.value)} /> */}
                                 <Form.Control hidden placeholder="Password (optional)" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                <Button className="meetingbttn" onClick={handleClick} type="submit">Start / Join</Button>
+                                <Button className="meetingbttn" onClick={handleClick} type="submit">Start Meeting</Button>
                             </Form.Row>
                         </Form>
 

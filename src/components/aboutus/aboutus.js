@@ -91,7 +91,7 @@ const Aboutus = (props) => {
                 </div>
             </div>
             {/* ------------------------------------- */}
-            <div className="backcolorourmission">
+            {/* <div className="backcolorourmission">
                 <div className="aboutusmap">
                     <div className="ourmissionph2map">
                         <div className="titleaboutus">
@@ -112,7 +112,7 @@ const Aboutus = (props) => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* ----------------------------------------------------------------- */}
             
