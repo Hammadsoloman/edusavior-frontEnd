@@ -124,7 +124,7 @@ const Home = (props) => {
                   </Card.Title>
                   </section>
 
-                  <div className="uul">
+                  {/* <div className="uul">
 
                   <i class='f fas fa-star fa-spin fa-3x'></i>
                   <i class='f fas fa-star fa-spin fa-3x'></i>
@@ -133,7 +133,7 @@ const Home = (props) => {
                   <i class='f fas fa-star fa-spin fa-3x'></i>
                   <i class='k'>|</i>
                   <i class='k'>25 Reviews</i>
-                  </div>
+                  </div> */}
 
 
                   <Card.Text>
