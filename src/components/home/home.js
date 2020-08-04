@@ -33,8 +33,10 @@ const Home = (props) => {
         ABOUT US
       </h3>
       <p className="wlasac">
+
       We work hard to be the pioneer in virtual learning, and that by using video stream and real time chat in our courses         </p>
       <hr></hr>
+
       <div className="vision">
         <img
           className="d-blllo"
@@ -101,8 +103,10 @@ const Home = (props) => {
           OUR POPULAR COURSES
       </h3>
         <p className="wlasac">
+
         These are the most viewed courses on our website</p>
         <hr></hr>
+
         <Container>
 
           {allcourses.map(item => {
@@ -166,8 +170,10 @@ const Home = (props) => {
         ACHIVEMENT
       </h3>
       <p className="wlasac">
+
       We have obtained many partnerships with educational institutions, in addition to the achievements below       </p>
       <hr></hr>
+
       <MDBFooter color="mdb-color" className="font-smalll">
 
         <MDBContainer className="text-center text-md-left yy">
@@ -223,7 +229,7 @@ const Home = (props) => {
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
-      <hr></hr>
+      <hr className="hrhoome"></hr>
       <Carousel className="carousel-innner">
         <Carousel.Item>
           <img
