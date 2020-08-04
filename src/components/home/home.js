@@ -229,7 +229,7 @@ const Home = (props) => {
       </MDBFooter>
 
       <h3 className="COURSES">
-      WHAT PEOPLE SAYS
+      OUR INSTUCTORS
       </h3>
       <p className="wlasac">
         Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
@@ -238,33 +238,33 @@ const Home = (props) => {
         <Carousel.Item>
           <img
             className="d-blo"
-            src="https://i.imgur.com/gwQOiTQ.gif"
+            src="https://images.pexels.com/photos/1098601/pexels-photo-1098601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             alt="First slide"
           />
           <Carousel.Caption className="feeedback">
           <img
             className="d-bloooooo"
-            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/4.jpg"
+            src="https://files.slack.com/files-pri/TNGRRLUMA-F017RM5UPL7/60567650.jpg"
             
           />
-          <h3>Aliana D’suza</h3>
+          <h3>Reham AL-Sobh</h3>
             <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-blo"
-            src="https://i.imgur.com/gwQOiTQ.gif"
+            src="https://images.pexels.com/photos/1098601/pexels-photo-1098601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             alt="Third slide"
           />
 
           <Carousel.Caption className="feeedback">
           <img
             className="d-bloooooo"
-            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/2.jpg"
+            src="https://files.slack.com/files-tmb/TNGRRLUMA-F018K308XUZ-083d7b68d0/beautyplus______________________________save_720.jpg"
             
           />
-          <h3>Aliana D’suza</h3>
+          <h3>Osama Mousa</h3>
             <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -272,7 +272,7 @@ const Home = (props) => {
           <img
             className="d-blo"
             // src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            src="https://i.imgur.com/gwQOiTQ.gif"
+            src="https://images.pexels.com/photos/1098601/pexels-photo-1098601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 
             alt="Third slide"
           />
@@ -280,10 +280,26 @@ const Home = (props) => {
           <Carousel.Caption className="feeedback">
           <img
             className="d-bloooooo"
-            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/1.jpg"
+            src="https://files.slack.com/files-pri/TNGRRLUMA-F018K5WB23B/face.jpg"
             
           />
-            <h3>Aliana D’suza</h3>
+            <h3>Hammad AbuSulaiman</h3>
+            <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-blo"
+            src="https://images.pexels.com/photos/1098601/pexels-photo-1098601.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption className="feeedback">
+          <img
+            className="d-bloooooo"
+            src="https://ca.slack-edge.com/TNGRRLUMA-UTE8D5M2L-dde46e5d5fac-512"
+            
+          />
+          <h3>Amal Almomnai</h3>
             <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
