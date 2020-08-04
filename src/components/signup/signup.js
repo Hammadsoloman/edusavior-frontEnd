@@ -135,7 +135,7 @@ const Signup = (props) => {
         <div className="divreg">
           <p className="animate__animated animate__bounceInDown get50">GET 50+ COURSES FREE ACCESS</p>
           <p className="animate__animated animate__bounceInUp now">REGISTERS NOW</p>
-          <p className="animate__animated animate__fadeIn noow animate__infinite  ">Welcome to EDUSAVIOR</p>
+          <p className="animate__animated animate__bounceInLeft noow ">Welcome to EDUSAVIOR</p>
         </div>
        
         <Form className="animate__animated animate__zoomIn signform mr " onSubmit={handleSubmit}>
@@ -177,10 +177,10 @@ const Signup = (props) => {
               <Form.Control type="file" placeholder="profile_img" name="profile_img" minlength="9" onChange={handleFile} />
             </Col>
             <Show condition={loading} >
-              <img src='https://thumbs.gfycat.com/SimilarPlumpBarasingha-max-1mb.gif' />
+              <img className="loader" src='https://thumbs.gfycat.com/SimilarPlumpBarasingha-max-1mb.gif' />
             </Show>
           </Form.Group>
-          <select required name="role" onChange={handleChange}>
+          <select className="upsel" required name="role" onChange={handleChange}>
             <option selected disabled>Choose your role</option>
                 <option value='student'>student</option>
                 <option value='instructor'>instructor</option>

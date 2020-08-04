@@ -245,6 +245,8 @@ hr {
     width: 10%;
     border: 0;
     border-top: 3px solid red !important;
+    position: relative;
+    left: 45%;
 }
  img.card-img-top:hover {
     -webkit-filter: brightness(50%);
@@ -387,7 +389,32 @@ img.d-blo {
     vertical-align: middle;
     border-style: none;
     height: 430px;
-    width: 51%;
-    margin-left: 23%;
-    box-shadow: -3px 5px 27px grey;
+    width: 75%;
+    margin-left: 12%;
+    box-shadow: 0px 0px 27px 4px grey;
+}
+
+#homeheight{
+    height: 130px;
+}
+
+.carousel-caption.feeedback{
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 30%;
+    z-index: 10;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    width: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #b52222;
+    text-align: center;
+}
+
+.d-bloooooo {
+    height: 110px;
+    margin-bottom: 2%;
+    border-radius: 59px;
 }

@@ -71,7 +71,7 @@ const Login = (props) => {
         <div className="divreg">
           <p className="animate__animated animate__bounceInDown get50">GET 50+ COURSES FREE ACCESS</p>
           <p className="animate__animated animate__bounceInUp now">REGISTERS NOW</p>
-          <p className="animate__animated animate__fadeIn noow animate__infinite  ">Welcome to EDUSAVIOR</p>
+          <p className="animate__animated animate__bounceInLeft noow ">Welcome to EDUSAVIOR</p>
         </div>
         {/* <div className="divclock">
           <h2 className="h2clock">It is {date.toLocaleTimeString()}.</h2>
@@ -80,7 +80,7 @@ const Login = (props) => {
           <span className="labeel">Sign in</span>
           <hr className="hrsign"></hr>
 
-          <Form.Group as={Row} controlId="formHorizontalEmail">
+          <Form.Group className="bnmv" as={Row} controlId="formHorizontalEmail">
             <Form.Label className="signlabel" column sm={2}>
               Username
             </Form.Label>
@@ -89,7 +89,7 @@ const Login = (props) => {
             </Col>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formHorizontalPassword">
+          <Form.Group className="bnmv" as={Row} controlId="formHorizontalPassword">
             <Form.Label className="signlabel" column sm={2}>
               Password
             </Form.Label>
@@ -102,7 +102,7 @@ const Login = (props) => {
             <span className="errorsign">* {props.user}</span>
           </Show>
 
-          <Form.Group as={Row}>
+          <Form.Group className="bnmv" as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
               <Button className="signlsubmit" type="submit">Sign in</Button>
             </Col>

@@ -8,6 +8,7 @@ import Show from '../show/index';
 import cookie from 'react-cookies';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
@@ -164,7 +165,9 @@ const Header = (props) => {
                     })}
                 </ul>
             </section>
-
+            <div>
+        <ScrollUpButton />
+      </div>
         </>
 
 

@@ -69,12 +69,14 @@ const Dashboard = (props) => {
             <Card className="caaard" style={{ width: '18rem' }} key={item._id}>
               <Card.Img variant="top" src={item.img_url} />
               <Card.Body>
+              <section id="homeheight">
                 <Card.Text className="subj">
                   {item.subject}
                 </Card.Text>
                 {/* <hr className="line"></hr> */}
                 <Card.Title>course: {item.course_name}
                 </Card.Title>
+                </section>
                 <div className="uul">
 
                   <i class='f fas fa-star fa-spin fa-3x'></i>

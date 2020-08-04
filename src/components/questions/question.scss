@@ -251,6 +251,8 @@ button.deleteques {
 .qc {
     border-top: 0px !important;
     width: 19%;
+    
+    position: initial;
     border: 0.5px solid #d4d1d1;
 }
 .eec{
@@ -290,7 +292,8 @@ li{
     .eeec{
         border-top: 0px !important;
         width: 24%;
-        
+        position: initial;
+
         border: 0.5px solid #d6a9a9;
     }
 }

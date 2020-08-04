@@ -114,12 +114,16 @@ const Home = (props) => {
               <Card className="caaard" style={{ width: '18rem' }} key={item._id}>
                 <Card.Img variant="top" src={item.img_url} />
                 <Card.Body>
+                  <section id="homeheight">
+
                   <Card.Text className="subj">
                     {item.subject}
                   </Card.Text>
                   {/* <hr className="line"></hr> */}
                   <Card.Title>course: {item.course_name}
                   </Card.Title>
+                  </section>
+
                   <div className="uul">
 
                   <i class='f fas fa-star fa-spin fa-3x'></i>
@@ -136,7 +140,7 @@ const Home = (props) => {
                     Course duration: {item.literature_time}
                   </Card.Text>
                   <Card.Text>
-                    instructor: {item.instructor}
+                    Instructor: {item.instructor}
                   </Card.Text>
               
                     <Button
@@ -234,36 +238,53 @@ const Home = (props) => {
         <Carousel.Item>
           <img
             className="d-blo"
-            src="https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            src="https://i.imgur.com/gwQOiTQ.gif"
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className="feeedback">
+          <img
+            className="d-bloooooo"
+            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/4.jpg"
+            
+          />
+          <h3>Aliana D’suza</h3>
+            <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-blo"
-            src="https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            src="https://i.imgur.com/gwQOiTQ.gif"
             alt="Third slide"
           />
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className="feeedback">
+          <img
+            className="d-bloooooo"
+            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/2.jpg"
+            
+          />
+          <h3>Aliana D’suza</h3>
+            <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-blo"
-            src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            // src="https://images.pexels.com/photos/864994/pexels-photo-864994.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            src="https://i.imgur.com/gwQOiTQ.gif"
+
             alt="Third slide"
           />
 
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <Carousel.Caption className="feeedback">
+          <img
+            className="d-bloooooo"
+            src="http://keenitsolutions.com/products/html/edulearn/edulearn-demo/images/testimonial/1.jpg"
+            
+          />
+            <h3>Aliana D’suza</h3>
+            <p>Tempor non elit nec augue nec gravida et sed velit. Aliquam tempus eget lorem ut malesuada. Phasellus dictum est sed libero posuere dignissim.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -276,3 +297,4 @@ const Home = (props) => {
 
 
 export default Home;
+
