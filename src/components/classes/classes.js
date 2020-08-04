@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Show from '../show/index'
 import cookie from 'react-cookies';
 import useCoursses from '../../hooks/coursses/coursses';
@@ -9,13 +9,16 @@ import useCoursses from '../../hooks/coursses/coursses';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import Carousel from 'react-bootstrap/Carousel';
+import { Row, Toast } from 'react-bootstrap';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Image from 'react-bootstrap/Image';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink  ,withRouter} from 'react-router-dom';
+import Popover from 'react-bootstrap/Popover';
+
 import '../../components/classes/classes.scss';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 
 const Classes = (props) => {
@@ -23,18 +26,26 @@ const Classes = (props) => {
   const user = cookie.load('user');
 
 
-  useEffect(getCoursses, []);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  // const user = cookie.load('user');
-  ////////////////
+    useEffect(getCoursses, []);
+    
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+    const handleAddCourse = (id) =>{
+      addToDashboard(id);
+      props.history.push('/dashboard');
+    }
+
+
 
 
   return (
 
     <>
+
       <div className="classes">
+
         <div className="buttonclasses">
           <h3 className="CLASSES">
             OUR CLASSES
@@ -76,12 +87,12 @@ const Classes = (props) => {
 
                   </Collapse> */}
                   <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> {item.description} </p>
-                  <Button className="adtodashbtn" onClick={() => addToDashboard(item._id)}>Enroll Now</Button>
-                  <br></br>
-
+                <Button className="adtodashbtn" onClick={()=> handleAddCourse(item._id) }>Enroll Now</Button>
+          <br></br>
 
                 </Card.Body>
-              </Card>
+
+               </Card>
             )
           })}
 
@@ -91,13 +102,12 @@ const Classes = (props) => {
         <ScrollUpButton />
 
       </div>
-     
-  );  
-    </>
 
-  );
-};
+      </>
+      
+    );
+    };
+    
+    
+export default withRouter(Classes);
 
-
-
-export default Classes;
