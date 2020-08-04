@@ -142,7 +142,10 @@ const Details = ({ match, token }) => {
             <div>
                 <ScrollUpButton />
             </div>
+            <div className="chattttdiv">
+
             <Chat user={user} courseDetial={courseDetial} />
+            </div>
             {/* <a href="https://video-chat.dgurgel.now.sh/">video chat</a> */}
         </>
     );

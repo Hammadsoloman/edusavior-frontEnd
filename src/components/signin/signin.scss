@@ -14,7 +14,7 @@ form.signform {
     opacity: 0.8;
     font-family: 'Roboto Condensed', sans-serif;
     left: 60%;
-    padding: 2%;
+    padding: 4%;
 }
 
 img.signpage {
@@ -22,7 +22,7 @@ img.signpage {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
-    height: auto;
+    height: 730px;
     width: 100%;
 }
 .total{
@@ -81,8 +81,10 @@ button.signlsubmiiit.btn.btn-primary:hover {
     display: grid;
     justify-content: center;
 }
-.hrsign{
+.hrsign {
     width: 80%;
+    position: relative;
+    left: 33px;
 }
 .divreg{
     position: absolute;
@@ -180,12 +182,16 @@ h5.intro1 {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     margin-top: 4%;
+    padding-top: 24px;
+
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
 
 }
-.hrsigggn{
+.hrsigggn {
     width: 20%;
+    position: relative;
+    left: 40%;
 }
 .video-react{
     left: 8%;
@@ -197,4 +203,11 @@ background: #7d7d7d12;
 
     .account8{
         text-align: center;
+    }
+
+    .bnmv {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 32px !important;
+         margin-left: 0 !important; 
     }

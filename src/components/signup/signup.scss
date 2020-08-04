@@ -9,9 +9,17 @@ img.signuppage {
 }
 
 p.noow {
-    font-size: 52px;
+    font-size: 52px !important;
     color: #d2322f;
     font-weight: 700;
 }
+select.upsel {
+    margin-left: 3px;
+    word-wrap: normal;
+}
 
 
+.loader{
+    height: 90px;
+    
+}

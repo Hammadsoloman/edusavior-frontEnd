@@ -2,7 +2,7 @@ h3.CLASSES {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 29px;
     font-weight: 600;
-    margin-top: 70px;
+    margin-top: 24px;
     margin-left: 88px;
 }
 
@@ -31,8 +31,10 @@ p.textclasses1{
     background: #e8e5e52e;
     margin-left: -19px;
     margin-right: -20px;
+    font-family: 'Roboto Condensed', sans-serif;
+
     padding: 11px;
-    // height: auto;
+    height: 145px;
 }
 .spanpar{
     font-size: 15px;
@@ -46,13 +48,20 @@ p.textclasses1{
 
 a.navLinkClasses {
     // position:absolute;
-        color: black;
+        color: white;
+        background: rgb(19, 18, 18);
         font-weight: 800;
         font-size: 25px;
-        // border: 2px solid;
-        margin-left: 780px;
-        // margin-top: 200px;
-        margin-bottom: 70px;
+        border: 2px solid;
+        width: 13%;
+        padding: 3px;
+        top: -46px;
+        border-radius: 7px;
+        left: 84%;
+        text-align: center;
+        position: relative;
+        text-decoration: none !important;
+        font-family: 'Roboto Condensed', sans-serif;
         text-decoration: underline;
 }
 
@@ -64,20 +73,36 @@ a.navLinkClasses:hover{
     // background: #f0f0f0cc;
     padding: 2.5%;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 17px;
 }
 .couresclasses.card-title.h5 {
     margin-bottom: 28px;
 }
-@media (max-width:1366px){
-    .buttonclasses {
-        margin-left: -460px;
-    }
-}
+
 
 hr.hrrrdash {
     position: relative;
 //    margin-top: 2%;
 //    margin-bottom: 3%;
     left: 7%;
+}
+#classheight{
+    height: 165px;
+}
+
+// .dash {
+//     margin-top: 40px;
+// }
+
+.buttonclasses {
+    display: grid;
+    height: 59px;
+}
+
+.deleteclass{
+    position: absolute;
+    left: 90%;
+    width: 8%;
+    background: #c62726;
+    border-radius: 3px;
 }

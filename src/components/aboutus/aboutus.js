@@ -12,8 +12,8 @@ import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
-import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import Carousel from 'react-bootstrap/Carousel';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import Image from 'react-bootstrap/Image';
@@ -118,20 +118,11 @@ const Aboutus = (props) => {
             
  
             <section class="speakers-section">
-        {/* <div class="parallax-scene parallax-scene-2 anim-icons">
-            <span data-depth="0.40" class="parallax-layer icon icon-circle-5"></span>
-            <span data-depth="0.99" class="parallax-layer icon icon-circle-5"></span>
-        </div> */}
-
-        <div class="container2">
+              <div class="container2">
         <div className="titleteams">
                             <h2 className="h2ourmission">OUR TEAM</h2>
                         </div>
-            {/* <div class="sec-title light text-center">
-                {/* <span class="title">Our Team</span> */}
-                {/* <h2>OUR TEAM</h2>
-            </div> */}
-
+          
             <div class="row1">
           
                 <div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
@@ -221,7 +212,9 @@ const Aboutus = (props) => {
             </div>
         </div>
     </section>
-
+    <div>
+        <ScrollUpButton />
+      </div>
         </>
 
     );

@@ -13,6 +13,8 @@ import Header2 from './components/header2/header2';
 import Header3 from './components/header3/header3';
 import Header4 from './components/header4/header4';
 import Header5 from './components/header5/header5';
+import Header6 from './components/header6/header6';
+
 
 
 
@@ -78,7 +80,7 @@ const App = (props) => {
                     </Route>
 
                     <Route exact path='/classes'>
-                    <Header  user={user} logout={logedout} />
+                    <Header6  user={user} logout={logedout} />
 
                         <Classes token={tokenSigned} user={user} />
                     </Route>
