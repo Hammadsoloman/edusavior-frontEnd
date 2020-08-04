@@ -51,12 +51,13 @@ a.detailstxt:hover {
 button.detailsbtn {
     background: rgb(168, 5, 5);
     font-family: 'Roboto Condensed', sans-serif;
-    border: revert;
+    border: none;
+
 }
 button.detailsbtn:hover {
-    background: rgb(19, 18, 18);
+    background: rgba(19, 18, 18, 0.932);
     font-family: 'Roboto Condensed', sans-serif;
-    border: revert;
+    border: none;
 }
 .bttn1 {
     margin-right: 26px;

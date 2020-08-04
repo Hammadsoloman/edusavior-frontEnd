@@ -71,9 +71,9 @@ const Details = ({ match, token }) => {
             </SideNav>
             <div className="divdash"> Course Info</div>
             <hr className="hrdash"></hr>
-            <Button className="detailsbtn3">
+            {/* <Button className="detailsbtn3">
                 <Link className="detailstxt" to="/dashboard">Back To Dashboard</Link>
-            </Button>
+            </Button> */}
 
             {courseDetial.map(item => {
                 return (

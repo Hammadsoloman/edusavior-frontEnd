@@ -8,7 +8,7 @@
 .addcourse{
     display: flex;
     flex-wrap: wrap;
-    width: 45%;
+    width: 50%;
     height: 100%;
     background-color: rgb(255, 255, 255);  
     text-align: left;
@@ -19,8 +19,8 @@
     font-weight: 600;
     font-size: 20px;
     box-sizing: border-box;
-    margin-top: 20px;
-    margin-left: 470px;
+    margin-top: 4%;
+    margin-left: 26%;
     padding: 50px;
     border-radius: 2px;
     box-shadow: 0 0 0 0.2rem rgba(104, 106, 107, 0.5);
@@ -32,14 +32,14 @@ input.inputaddcourse.form-control[type=text]:focus {
     border: 3px solid rgba(255, 0, 0, 0.473);
   }  
   label.label1.form-label {
-    margin-left: 240px;
+    margin-left: 192px;
     font-size: 35px;
 }
 .label6{
     font-size: 30px;
 }
 .label4.form-group {
-    margin-left: 335px;
+    margin-left: 326px;
     margin-top: -93px;
 }
 .label5{
@@ -47,7 +47,7 @@ input.inputaddcourse.form-control[type=text]:focus {
     margin-bottom: 30px;
 }
 input.inputaddcourse.form-control {
-    width: 300px;
+    width:55%;
 
 }
 
@@ -57,21 +57,22 @@ button.addcoursebtn {
     border-color: red;
     background: #a5a5a5;
     border-color: #f3f3f3;
-    width: 50%;
+    width: 35%;
     color: black;
-    height: 50px;
+    height: 6%;
     font-weight: 500;
     font-size: 20px;
-    border-radius: 2px;
+    border-radius: 5px;
     font-weight: bolder;
     margin-top: 20px;
-    margin-left: 150px;
+    margin-left: 192px;
+
 }
 button.addcoursebtn:hover {
     background: rgb(243, 10, 10);
     border-color: red;
-    width: 50%;
-    border-radius: 2px;
+    width: 35%;
+    border-radius: 5px;
 }
 button.addcoursebtn:focus {
     // color: #fff;
@@ -82,6 +83,7 @@ button.addcoursebtn:focus {
 
 .label7{
     border:none;
+    width: 100%;
 }
 input.form-control-file {
     font-size: 20px;
