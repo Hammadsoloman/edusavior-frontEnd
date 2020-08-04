@@ -40,7 +40,10 @@ const Header = (props) => {
         // e.target.reset();
     }
 
-    useEffect(getQuestions, [])
+    useEffect(getQuestions, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             {/* <div className="divdash"> Question & Answer</div>

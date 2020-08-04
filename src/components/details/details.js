@@ -32,7 +32,9 @@ const Details = ({ match, token }) => {
         event.preventDefault()
         if (courseDetial[0] && user.username) setCall(true)
     }
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <SideNav

@@ -22,11 +22,11 @@ const Header2 = (props) => {
        
         <i class='fas fa-graduation-cap fa-pull-left fa-3x'></i>
            <p className="headeeer" className="animate__animated animate__pulse animate__infinite">EDUSAVIOR</p>
-          <NavLink className="aaa" to='/'>HOME</NavLink>
-          <NavLink  className="aaa" to='/classes'>CLASSES</NavLink>
-          <NavLink  className="aaa" to="/dashboard">DASHBOARD</NavLink>
-          <NavLink  className="aaa" to="/QandA">Q&A</NavLink>
-          <NavLink  className="aaa" to='/about'>ABOUT US</NavLink>
+          <NavLink exact className="aaa" to='/'>HOME</NavLink>
+          <NavLink exact className="aaa" to='/classes'>CLASSES</NavLink>
+          <NavLink exact  className="aaa" to="/dashboard">DASHBOARD</NavLink>
+          <NavLink exact className="aaa" to="/QandA">Q&A</NavLink>
+          <NavLink exact className="aaa" to='/about'>ABOUT US</NavLink>
           {/* <NavLink  className="aaa" to='/appointments'>Appointments</NavLink> */}
         </Nav>
        <img className="userImage" src={user.profile_img ? user.profile_img : 'https://www.dovercourt.org/wp-content/uploads/2019/11/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg'} />
