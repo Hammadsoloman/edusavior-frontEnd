@@ -97,7 +97,7 @@ const Dashboard = (props) => {
                   Course duration: {item.literature_time}
                 </Card.Text>
                 <Card.Text>
-                  instructor: {item.instructor}
+                  Instructor: {item.instructor}
                 </Card.Text>
                 <Button className="detailsbtn bttn1">
                   <Link className="detailstxt" to={`details/${item._id}`}>View Details</Link>

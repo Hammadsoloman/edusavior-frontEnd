@@ -39,12 +39,15 @@ const Aboutus = (props) => {
                         <h2 className="h2ourhistory">OUR HISTORY</h2>
                         {/* <hr className="hrourhistory"></hr> */}
                     </div>
-                    <p className="pourhistory p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.
+                    <p className="pourhistory p1"> First website in the Arab word that give courses in alive stream.
+                    
+
+
+
                     </p>
                     <p className="pourhistory">
-                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to belongs to who fail in their duty.
+                    edusavior will be your favorite website that provide you with some courses that you might need in your life to have a good educational background with a group of the best instructors in that field
+
                     </p>
                 </div>
             </div>
@@ -55,12 +58,10 @@ const Aboutus = (props) => {
                         <div className="titleaboutus">
                             <h2 className="h2ourmission">OUR MISSION</h2>
                         </div>
-                        <p className="pourmission p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.
+                        <p className="pourmission p2"> The pain point will our project solve is the communication gap between the instructor and the student, that will give you the ability to communicate with your instructor effortlessly and you will never feel dispersed between what the apps or website you will use to communicate directly with your instructor and you will find their videos and tasks that related to your course, also if you have any question you can ask and see other questions.
+
                     </p>
                         <p className="pourmission">
-                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to belongs to who fail in their duty.
                     </p>
                     </div>
 
@@ -81,12 +82,11 @@ const Aboutus = (props) => {
                         <h2 className="h2ourhistory">OUR VISION</h2>
                         {/* <hr className="hrourhistory"></hr> */}
                     </div>
-                    <p className="pourhistory p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe derit in voluptate velit esse cillum.
+                    <p className="pourhistory p1">  Our vision is to make the students practice at their place, first filling in gaps in their understanding and then accelerating their learning.
+              so we provide you with some courses that you might need in your life to have a good educational background with a group of the best instructors in that field, also to reduce the gaps between the student and the instructor by doing a one to one meeting .
+              you can also ask about something that you still uncleared for you, and the others will replay to your question.
                     </p>
                     <p className="pourhistory">
-                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot fore see the pain and trouble that are bound to belongs to who fail in their duty.
                     </p>
                 </div>
             </div>
@@ -101,9 +101,9 @@ const Aboutus = (props) => {
                         <p className="pourmission">
                             <i className="fa fa-envelope mr-3" /> EDUSAVIOUR@gmail.com</p>
                         <p className="pourmission">
-                            <i className="fa fa-phone mr-3" /> + 01 234 567 88 </p>
+                            <i className="fa fa-phone mr-3" /> + 962 788 224 5566 </p>
                         <p className="pourmission">
-                            <i className="fa fa-print mr-3" /> + 01 234 567 89</p>
+                            <i className="fa fa-print mr-3" /> + 962 799 224 5566</p>
                             
                     </div>
 

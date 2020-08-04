@@ -99,7 +99,7 @@ const Classes = (props) => {
 
           <button onClick={()=> deleteCourseFromCourses(item._id) }>X</button>
           </Show>
-                  <Button className="adtodashbtn" onClick={()=> addToDashboard(item._id) }>Add To Dashboard </Button>
+                  <Button className="adtodashbtn" onClick={()=> addToDashboard(item._id) }>Enroll Now</Button>
           <br></br>
 
                   
