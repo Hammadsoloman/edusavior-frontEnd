@@ -105,7 +105,7 @@ const Dashboard = (props) => {
                   Instructor: {item.instructor}
                 </Card.Text>
                 <Button className="detailsbtn bttn1">
-                  <Link className="detailstxt" to={`details/${item._id}`}>View Details</Link>
+                  <Link className="detailstxt" to={`details/${item._id}`}>Join Class</Link>
                 </Button>
                 <Button
                   className="detailsbtn"

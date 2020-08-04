@@ -13,19 +13,24 @@ p.subj1.card-text {
     /* font-weight: 700; */
     font-family: 'Roboto Condensed', sans-serif;
         font-weight: bolder;
+        
 }
 button.adtodashbtn {
     background: rgb(168, 5, 5);
     font-family: 'Roboto Condensed', sans-serif;
-    border: revert;
-    width: 99%;
+    // border: revert;
+    width: 85%;
+    border: none;
+    outline: none 
+
 }
 
 
 button.adtodashbtn:hover {
-    background: rgb(19, 18, 18);
+    background: rgba(19, 18, 18, 0.932);
     font-family: 'Roboto Condensed', sans-serif;
-    border: revert;
+    // border: revert;
+    border: none;
 }
 p.textclasses1{
     background: #e8e5e52e;
@@ -49,11 +54,11 @@ p.textclasses1{
 a.navLinkClasses {
     // position:absolute;
         color: white;
-        background: rgb(19, 18, 18);
+        background:#c03534;
         font-weight: 800;
-        font-size: 25px;
+        font-size: 20px;
         border: 2px solid;
-        width: 13%;
+        width: 11%;
         padding: 3px;
         top: -46px;
         border-radius: 7px;
@@ -66,8 +71,9 @@ a.navLinkClasses {
 }
 
 a.navLinkClasses:hover{
-    color: #4d4e4e !important;
+    color: rgba(19, 18, 18, 0.863) !important;
     text-decoration: none !important; 
+    border: none;
 }
 .classes {
     // background: #f0f0f0cc;
@@ -103,6 +109,11 @@ hr.hrrrdash {
     position: absolute;
     left: 90%;
     width: 8%;
-    background: #c62726;
+    background: #ffffff;
     border-radius: 3px;
+    margin-top: 131.5%;
+    margin-left: -4%;
+}
+.deleteclass:hover{
+    color: rgba(88, 88, 88, 0.459);
 }

@@ -115,7 +115,7 @@ const handleFile = (e) =>{
             {/* --------description----------- */}
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Label>Description</Form.Label>
-              <Form.Control className="inputaddcourse" as="textarea" rows="3" type="text" name="description" placeholder="description ..." onChange={handleChange} />
+              <Form.Control className="inputaddcours" as="textarea" rows="3" type="text" name="description" placeholder="description ..." onChange={handleChange} />
             </Form.Group>
             {/* --------details----------- */}
             <Form.Group controlId="exampleForm.ControlTextarea1">

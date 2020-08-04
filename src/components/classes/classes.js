@@ -20,9 +20,11 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
+
 const Classes = (props) => {
   const [allcourses, getCoursses, addCourses, addToDashboard, getCoursesFromDashboard, dashboardCourses, delteCourse, toggleShow, deleteCourseFromCourses] = useCoursses(props.token);
   const user = cookie.load('user');
+
 
     useEffect(getCoursses, []);
     
@@ -37,10 +39,10 @@ const Classes = (props) => {
 
 
 
+
   return (
 
     <>
-
 
       <div className="classes">
 
@@ -85,12 +87,8 @@ const Classes = (props) => {
 
                   </Collapse> */}
                   <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> {item.description} </p>
-                           <Button className="adtodashbtn" onClick={()=> handleAddCourse(item._id) }>Enroll Now</Button>
+                <Button className="adtodashbtn" onClick={()=> handleAddCourse(item._id) }>Enroll Now</Button>
           <br></br>
-
-                  
-                
-
 
                 </Card.Body>
 
@@ -102,7 +100,9 @@ const Classes = (props) => {
       </div>
       <div>
         <ScrollUpButton />
+
       </div>
+
       </>
       
     );
@@ -110,3 +110,4 @@ const Classes = (props) => {
     
     
 export default withRouter(Classes);
+
