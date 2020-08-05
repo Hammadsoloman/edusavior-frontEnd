@@ -1,41 +1,29 @@
-// App.js
-
 import React, { useState, useEffect } from 'react';
 import useSocket from 'use-socket.io-client';
 import { useImmer } from 'use-immer';
-
 import './index.css';
 import cookie from 'react-cookies';
 const user = cookie.load('user');
- 
 const Messages = props => props.data.map(m => m[0] !== '' ? (<li><strong>{m[0]}</strong> : <div className="innermsg">{m[1]}</div></li>) : (<li className="update">{m[1]}</li>) );
-
 const Online = props => props.data.map(m => <li id={m[0]}>{m[1]}</li>)
-
 export default (props) => {
   const [id, setId] = useState('');
 //   const [nameInput, setNameInput] = useState('');
 //   const [room, setRoom] = useState('');
   const [input, setInput] = useState('');
-
   const [socket] = useSocket('https://open-chat-naostsaecf.now.sh');
 	socket.connect();
-
   const [messages, setMessages] = useImmer([]);
-
   const [online, setOnline] = useImmer([]);
-
   useEffect(()=>{
     socket.on('message que',(nick,message) => {
       setMessages(draft => {
         draft.push([nick,message])
       })
     });
-
     socket.on('update',message => setMessages(draft => {
       draft.push(['',message]);
     }))
-
     socket.on('people-list',people => {
       let newState = [];
       for(let person in people){
@@ -44,22 +32,18 @@ export default (props) => {
       setOnline(draft=>{draft.push(...newState)});
       console.log(online)
     });
-
     socket.on('add-person',(nick,id)=>{
       setOnline(draft => {
         draft.push([id,nick])
       })
     })
-
     socket.on('remove-person',id=>{
       setOnline(draft => draft.filter(m => m[0] !== id))
     })
-
     socket.on('chat message',(nick,message)=>{
       setMessages(draft => {draft.push([nick,message])})
     })
   },0);
-
   const handleSubmit = e => {
     e.preventDefault();
     // if (!nameInput) {
@@ -68,7 +52,6 @@ export default (props) => {
     setId(props.user.username);
     socket.emit("join", props.user.username,props.courseDetial[0].course_name);
   };
-
   const handleSend = e => {
     e.preventDefault();
     if(input !== ''){
@@ -77,22 +60,26 @@ export default (props) => {
     }
     e.target.reset();
   }
-
   return id ? (
-    <section style={{display:'flex',flexDirection:'row'}} >
+    // <section className="chatsection" style={{display:'flex',flexDirection:'row'}} ></section>
+    <section className="chatsection" >
+      <div className="msg">
       <ul id="messages"><Messages data={messages} /></ul>
-      <ul id="online"> 🌐 : <Online data={online} /> </ul>
+      <ul id="online"> <span class="dot"></span>
+      online : <Online data={online} /> </ul>
+      </div>
       <div id="sendform">
-        <form onSubmit={e => handleSend(e)} style={{display: 'flex'}}>
+        <form className="eeeeeeeeeform" onSubmit={e => handleSend(e)} >
             <input id="m" onChange={e=>setInput(e.target.value.trim())} /><button style={{width:'75px'}} type="submit">Send</button>
         </form>
       </div>
     </section>
   ) : (
-    <div style={{ textAlign: 'center', margin: '30vh auto', width: '70%' }}>
+    <div className="chatbttttttn">
       <form onSubmit={event => handleSubmit(event)}>
         <button className="chatbttn" type="submit">join chat</button>
       </form>
     </div>
   );
 };
+// style={{ textAlign: 'center', margin: '30vh auto', width: '70%' }}
