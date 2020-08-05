@@ -71,7 +71,7 @@ const Classes = (props) => {
                     <Card.Text className="subj1">
                       {item.subject}
                     </Card.Text>
-                    <Card.Title className="couresclasses" >course name: <span>{item.course_name}</span>
+                    <Card.Title className="couresclasses" ><span>{item.course_name}</span>
                     </Card.Title>
                   </section>
                   <Card.Text >
@@ -86,7 +86,7 @@ const Classes = (props) => {
                     </div>
 
                   </Collapse> */}
-                  <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> {item.description} </p>
+                  <p className="textclasses1"><span className="spanpar">Course description:</span><br></br> <span className="des1">{item.description} </span></p>
                 <Button className="adtodashbtn" onClick={()=> handleAddCourse(item._id) }>Enroll Now</Button>
           <br></br>
 

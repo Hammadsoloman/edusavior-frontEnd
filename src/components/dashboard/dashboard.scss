@@ -36,15 +36,21 @@
     margin-top: 97px;
 }
 p.description {
-    background: #e8e5e52e;
-    margin-left: -19px;
-    margin-right: -20px;
-    padding: 11px;
-    height: 141px;
+    background: #d1d0d031;
+    margin-left: -35px;
+    margin-right: -16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 7px;
+    height: 108px;
+    padding-bottom: 5px;
+}
+.des1{
+    margin-left: 10px;
 }
 a.detailstxt {
     color: white;
 }
+
 a.detailstxt:hover {
     color: white;
 }
@@ -68,6 +74,9 @@ button.detailsbtn:hover {
     font-weight: 600;
     margin-top: 70px;
     margin-left: 104px;
+}
+#homeheight {
+    height: 112px;
 }
 hr.hrdash {
     position: absolute;

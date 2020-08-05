@@ -73,11 +73,11 @@ const Dashboard = (props) => {
               <Card.Img variant="top" src={item.img_url} />
               <Card.Body>
               <section id="homeheight">
-                <Card.Text className="subj">
+                <Card.Text className="subj1">
                   {item.subject}
                 </Card.Text>
                 {/* <hr className="line"></hr> */}
-                <Card.Title>course: {item.course_name}
+                <Card.Title>{item.course_name}
                 </Card.Title>
                 </section>
                 {/* <div className="uul">
@@ -92,17 +92,17 @@ const Dashboard = (props) => {
                 </div> */}
 
                 <Card.Text className="description">
-                  Description : <br></br>
-                  {item.description}
+                  <span className="spanpar">Description :</span> <br></br>
+                 <span className="des1">{item.description}</span> 
                 </Card.Text>
-                <Card.Text>
-                  start_date: {item.start_date}
+                <Card.Text className="cardText2" >
+                  <span className="spanpar">start_date: </span>{item.start_date}
                 </Card.Text>
-                <Card.Text>
-                  Course duration: {item.literature_time}
+                <Card.Text className="cardText2">
+                 <span className="spanpar"> Course duration:</span> {item.literature_time}
                 </Card.Text>
-                <Card.Text>
-                  Instructor: {item.instructor}
+                <Card.Text className="cardText2">
+                  <span className="spanpar">Instructor: </span>{item.instructor}
                 </Card.Text>
                 <Button className="detailsbtn bttn1">
                   <Link className="detailstxt" to={`details/${item._id}`}>Join Class</Link>
