@@ -147,13 +147,14 @@ const Login = (props) => {
       <h2 className="intro4">EDUSAVIOR DEMO</h2>
       <hr className="hrsigggn"></hr>
 
-      <Player
+      {/* <Player
         playsInline
         poster="/assets/poster.png"
         src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
         fluid={false}
         width={1100}
-        height={500}      />
+        height={500}      /> */}
+        <iframe width="1100" height="500" src="https://www.youtube.com/embed/tzMpWiGL8D8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
 
