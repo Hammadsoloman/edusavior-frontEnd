@@ -8,7 +8,7 @@ h3.CLASSES {
 
 p.subj1.card-text {
     text-align: center;
-    font-size: 19px;
+    font-size: 16px;
     color: rgb(175, 5, 5);
     /* font-weight: 700; */
     font-family: 'Roboto Condensed', sans-serif;
@@ -21,7 +21,9 @@ button.adtodashbtn {
     // border: revert;
     width: 85%;
     border: none;
-    outline: none 
+    outline: none;
+    margin-top: 2px; 
+    margin-left: 12px;
 
 }
 
@@ -33,13 +35,14 @@ button.adtodashbtn:hover {
     border: none;
 }
 p.textclasses1{
-    background: #e8e5e52e;
-    margin-left: -19px;
-    margin-right: -20px;
+    background: #d1d0d031;
+    margin-left: -35px;
+    margin-right: -16px;
     font-family: 'Roboto Condensed', sans-serif;
+    padding: 7px;
+    height: 108px;
+    padding-bottom: 5px;
 
-    padding: 11px;
-    height: 145px;
 }
 .spanpar{
     font-size: 15px;
@@ -71,7 +74,7 @@ a.navLinkClasses {
 }
 
 a.navLinkClasses:hover{
-    color: rgba(19, 18, 18, 0.863) !important;
+    color: white !important;
     text-decoration: none !important; 
     border: none;
 }
@@ -79,21 +82,19 @@ a.navLinkClasses:hover{
     // background: #f0f0f0cc;
     padding: 2.5%;
     height: auto;
-    margin-bottom: 17px;
+    margin-bottom: 2px;
 }
 .couresclasses.card-title.h5 {
-    margin-bottom: 28px;
+    margin-bottom: 2px;
 }
 
 
 hr.hrrrdash {
     position: relative;
-//    margin-top: 2%;
-//    margin-bottom: 3%;
     left: 7%;
 }
-#classheight{
-    height: 165px;
+#classheight {
+    height: 116px;
 }
 
 // .dash {
@@ -111,9 +112,10 @@ hr.hrrrdash {
     width: 8%;
     background: #ffffff;
     border-radius: 3px;
-    margin-top: 131.5%;
-    margin-left: -4%;
+    margin-top: -69%;
+    margin-left: 0%;
+   background-color: rgb(214, 211, 211);
 }
-.deleteclass:hover{
-    color: rgba(88, 88, 88, 0.459);
-}
+// .deleteclass:hover{
+//     color: rgba(88, 88, 88, 0.459);
+// }

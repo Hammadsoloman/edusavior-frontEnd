@@ -234,8 +234,8 @@ const Home = (props) => {
       <h3 className="COURSES">
       OUR INSTUCTORS
       </h3>
-      <p className="wlasac">
-        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p>
+      {/* <p className="wlasac">
+        Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.           </p> */}
       <hr className="hrhoome"></hr>
       <Carousel className="carousel-innner">
         <Carousel.Item>
