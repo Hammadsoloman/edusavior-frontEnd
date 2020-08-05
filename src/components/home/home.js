@@ -264,7 +264,7 @@ const Home = (props) => {
           <Carousel.Caption className="feeedback">
           <img
             className="d-bloooooo"
-            src="https://files.slack.com/files-tmb/TNGRRLUMA-F018K308XUZ-083d7b68d0/beautyplus______________________________save_720.jpg"
+            src="https://scontent.famm7-1.fna.fbcdn.net/v/t1.0-9/92538527_2553749711512139_4722491153847418880_n.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_eui2=AeEjdpFdgij5EUbKvyi7IX4udbJRkcXBUh11slGRxcFSHdtPRpTRrnmeSGdRic1ccQ7a9Y8bjeZOkqXm33qhPOIn&_nc_ohc=RGzjzbr3Dt4AX8lMeqt&_nc_oc=AQnhdmJQw0ZBIbjiGorohvb4FAgjD2S6ugp5FiPXTZ5LrQEWkdRxOL-Eso_exjnL57g&_nc_ht=scontent.famm7-1.fna&oh=d2381c70c54b528174d3545ad9a9a5fb&oe=5F500941"
             
           />
           <h3>Osama Mousa</h3>

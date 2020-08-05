@@ -13,43 +13,43 @@ body {
   font: 16px Helvetica, Arial;
 }
 #sendform {
-  background: white;
   display: grid;
-  padding: 5px;
-  position: relative;
-  bottom: 38px;
-  width: 100%;
-  /* grid-template-columns: 51% 39%; */
+    padding: 5px;
+    position: relative;
+    bottom: 56px;
+    width: 67.5%;
+    background: black;
 }
 #sendform input {
   border: solid;
   padding: 10px;
   width: 95%;
-  border-radius: 20px;
+  border-radius: 6px;
   margin-right: 0.25%;
   border-width: 1px;
 }
 #sendform button {
-  background: rgb(130, 224, 255);
+  background:white;
   border: none;
+  color: #af3136;
+  font-size: 17px;
   padding: 10px 0 10px 0;
-  border-radius: 20px;
+  border-radius: 14px;
 }
 #messages {
-  /* margin-bottom: 45px; */
   list-style-type: none;
-  overflow-y: scroll;
+  overflow: scroll;
   flex: 3 1;
-  background: #3f94de0d;
+  background: black;
   border-radius: 14px;
   height: 378px;
   padding: 5px;
+  padding-bottom:23px;
 }
 #messages li {
   padding: 5px 10px;
   padding-left: 30px;
   margin-bottom: 2px;
-  /* width: 73%; */
 }
 #messages li:nth-child(odd) {
   background: white;
@@ -59,8 +59,8 @@ body {
   left: 10%;
 }
 #messages li:nth-child(even) {
-background: linear-gradient(17deg, #c5bfbf, transparent);  color: #04296d;
-border-radius: 11px;
+  background: #ef7277d1;
+  border-radius: 11px;
 position: relative;
 width: 90%;
 }
@@ -69,8 +69,9 @@ width: 90%;
   margin-left: auto;
   flex: 1;
   list-style: none;
-  background: #f4fafd;
+  background: #f1f1f1;
   overflow: scroll;
+  margin-bottom: 0rem;
 }
 #online li {
   margin-left: 25px;
@@ -110,7 +111,6 @@ border-radius: 50%;
 display: inline-block;
 }
 form.eeeeeeeeeform {
-  /* width: 100%; */
   display: flex;
 }
 
