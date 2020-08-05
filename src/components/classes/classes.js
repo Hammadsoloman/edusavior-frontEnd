@@ -32,8 +32,8 @@ const Classes = (props) => {
       window.scrollTo(0, 0);
     }, []);
 
-    const handleAddCourse = (id) =>{
-      addToDashboard(id);
+    const handleAddCourse = async (id) =>{
+     await addToDashboard(id);
       props.history.push('/dashboard');
     }
 
