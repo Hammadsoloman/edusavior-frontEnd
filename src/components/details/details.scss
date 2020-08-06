@@ -102,13 +102,17 @@ h2.hmeeting {
     
 }
 .div2meeet div:first-child {
-    width: 95% !important;
-  margin-left: 1%;
-  position: relative;
-    left: -1%;
-  display: flex;
+    width: 96% !important;
+    margin-left: 1%;
+    position: relative;
+    left: -5.5%;
+    display: flex;
 }
-
+.btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #0a0a0a;
+    border-color: #0c0c0c;
+}
 .imgdeataildev{
     padding: 1% 5%;
     width: 80%;
@@ -140,5 +144,6 @@ img.card-img-top.deatailsimg {
     margin-right: 2%;
     display: grid;
     margin-top: 2%;
+    margin-left: 34px;
     justify-content: end;
 }

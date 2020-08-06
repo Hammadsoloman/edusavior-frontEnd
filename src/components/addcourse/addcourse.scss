@@ -53,12 +53,12 @@ input.inputaddcourse.form-control {
 
 
 button.addcoursebtn {
-    background: rgb(243, 10, 10);
+  
+    
+    background: #cc0707;
     border-color: red;
-    background: #a5a5a5;
-    border-color: #f3f3f3;
+    color: white;
     width: 35%;
-    color: black;
     height: 6%;
     font-weight: 500;
     font-size: 20px;
@@ -69,8 +69,10 @@ button.addcoursebtn {
 
 }
 button.addcoursebtn:hover {
-    background: rgb(243, 10, 10);
-    border-color: red;
+    background: #a10a0a;
+    border-color: #f3f3f3;
+    color: white;
+
     width: 35%;
     border-radius: 5px;
 }

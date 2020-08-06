@@ -211,3 +211,18 @@ background: #7d7d7d12;
         margin-right: 32px !important;
          margin-left: 0 !important; 
     }
+
+    iframe {
+        /* display: grid; */
+        position: relative;
+        left: 10%;
+        border-radius: 11px;
+    }
+
+    svg {
+        /* color: red; */
+        background: #fbf8f8f0;
+        padding: 3px;
+        border: 2px solid;
+        margin-left: -3px;
+    }

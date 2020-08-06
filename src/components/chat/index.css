@@ -14,11 +14,12 @@ body {
 }
 #sendform {
   display: grid;
-    padding: 5px;
-    position: relative;
-    bottom: 56px;
-    width: 67.5%;
-    background: black;
+  padding: 5px;
+  position: relative;
+  bottom: 56px;
+  left: -20px;
+  width: 68%;
+  background: black;
 }
 #sendform input {
   border: solid;

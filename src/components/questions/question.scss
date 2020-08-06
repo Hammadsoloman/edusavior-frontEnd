@@ -41,12 +41,16 @@ textarea.form-control {
     padding: 1.25rem;
     
 }
-.roooow{
+.roooow {
     display: flex;
-    background-color:#f0f0f0cc;
-    border-radius: 10px;
+    background-color: #f0f0f0cc;
+    border-radius: 3px;
     padding: 10px 5px;
-    margin-bottom: 5px;    
+    position: relative;
+    left: -2.5%;
+    width: 105%;
+    margin-top: -12px;
+    margin-bottom: 5px;
 }
 .roooow1{
     display: flex;
@@ -233,7 +237,7 @@ button.deleteans {
 
 .replybtn{
     width: 13%;
-    margin-left: 80%;
+    margin-left: 84%;
     background-color: #c62726;
     border: none;
     border-radius: 3px;
@@ -242,7 +246,7 @@ button.deleteans {
     margin-bottom: 1%;
     position: relative;
     height: 4%;
-    padding: 5px;
+    padding: 6px;
 }
 .replybtn:hover{
     width: 13%;
@@ -251,21 +255,24 @@ button.deleteans {
 }
 .textareaquestion{
     width: 90%;
+    padding: 7px;
     border: 2px solid rgb(199, 196, 196);
   
 }
 .btnanswer{
     width: 14%;
-    margin-left: 80%;
+    margin-left: 83%;
     background-color: #c62726;
     border: none;
     border-radius: 3px;
     color: white;
     margin-top: 2%;
-    padding: 0px 6px;
+    padding: 6px 6px;
   border: none;
 }
-
+section.qqandaa {
+    overflow-x: hidden;
+}
 
 .btnanswer:hover{
     width: 14%;
